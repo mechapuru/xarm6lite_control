@@ -1,0 +1,220 @@
+[0.000000] (-) TimerEvent: {}
+[0.000243] (-) JobUnselected: {'identifier': 'd435i_xarm_setup'}
+[0.000268] (-) JobUnselected: {'identifier': 'mbot_demo'}
+[0.000286] (-) JobUnselected: {'identifier': 'realsense2_camera'}
+[0.000302] (-) JobUnselected: {'identifier': 'realsense2_camera_msgs'}
+[0.000316] (-) JobUnselected: {'identifier': 'realsense2_description'}
+[0.000331] (-) JobUnselected: {'identifier': 'realsense2_ros_mqtt_bridge'}
+[0.000342] (-) JobUnselected: {'identifier': 'realsense2_rviz_plugin'}
+[0.000359] (-) JobUnselected: {'identifier': 'realsense_gazebo_plugin'}
+[0.000369] (-) JobUnselected: {'identifier': 'uf_ros_lib'}
+[0.000379] (-) JobUnselected: {'identifier': 'xarm_api'}
+[0.000389] (-) JobUnselected: {'identifier': 'xarm_controller'}
+[0.000399] (-) JobUnselected: {'identifier': 'xarm_description'}
+[0.000408] (-) JobUnselected: {'identifier': 'xarm_gazebo'}
+[0.000418] (-) JobUnselected: {'identifier': 'xarm_moveit_config'}
+[0.000428] (-) JobUnselected: {'identifier': 'xarm_msgs'}
+[0.000437] (-) JobUnselected: {'identifier': 'xarm_planner'}
+[0.000447] (-) JobUnselected: {'identifier': 'xarm_sdk'}
+[0.000462] (xarm_moveit_servo) JobQueued: {'identifier': 'xarm_moveit_servo', 'dependencies': OrderedDict([('uf_ros_lib', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib'), ('xarm_description', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description'), ('xarm_msgs', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs'), ('xarm_sdk', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk'), ('xarm_api', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api'), ('xarm_controller', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller'), ('xarm_gazebo', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo'), ('xarm_moveit_config', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config')])}
+[0.000485] (xarm_moveit_servo) JobStarted: {'identifier': 'xarm_moveit_servo'}
+[0.010160] (xarm_moveit_servo) JobProgress: {'identifier': 'xarm_moveit_servo', 'progress': 'cmake'}
+[0.010605] (xarm_moveit_servo) Command: {'cmd': ['/usr/bin/cmake', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo', '-DCMAKE_INSTALL_PREFIX=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo'], 'cwd': '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'paddy'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/paddy/rrc/xarm_ws/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/install/librealsense2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/paddy/rrc/xarm_ws/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/lib'), ('HOME', '/home/paddy'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/paddy/rrc/xarm_ws/src'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('DESKTOP_SESSION', 'ubuntu-wayland'), ('NVM_BIN', '/home/paddy/.nvm/versions/node/v22.18.0/bin'), ('NVM_INC', '/home/paddy/.nvm/versions/node/v22.18.0/include/node'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1889'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '2059'), ('BUNDLED_DEBUGPY_PATH', '/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/paddy/miniconda3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2606'), ('NVM_DIR', '/home/paddy/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'paddy'), ('JOURNAL_STREAM', '8:6588'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/paddy/rrc/xarm_ws/install/librealsense2/lib/x86_64-linux-gnu/pkgconfig:/home/paddy/rrc/xarm_ws/install/librealsense2/lib/pkgconfig'), ('CLAUDE_CODE_SSE_PORT', '59670'), ('XDG_SESSION_CLASS', 'user'), ('GEMINI_CLI_IDE_WORKSPACE_PATH', '/home/paddy/rrc/xarm_ws'), ('USERNAME', 'paddy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('GEMINI_CLI_IDE_SERVER_PORT', '34633'), ('PATH', '/home/paddy/rrc/xarm_ws/install/librealsense2/bin:/opt/ros/humble/bin:/home/paddy/.nvm/versions/node/v22.18.0/bin:/home/paddy/miniconda3/condabin:/home/paddy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/bundled/scripts/noConfigScripts:/home/paddy/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/synth:@/tmp/.ICE-unix/2031,unix/synth:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', 'd031a6edd3254d48b035a0d32064546d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-4c2dd3d9881c24ae.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/paddy/.config/Code/User/workspaceStorage/9cf5a7ac8a67c54a9de65468298cdadd/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-wayland'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.MWBTF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-46cd3348ca.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install/realsense2_camera:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/install/mbot_demo'), ('CONDA_PYTHON_EXE', '/home/paddy/miniconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-wayland'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('_CONDA_EXE', '/home/paddy/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo'), ('ENABLE_IDE_INTEGRATION', 'true'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg'), ('CONDA_EXE', '/home/paddy/miniconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu-wayland:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge')]), 'shell': False}
+[0.071683] (xarm_moveit_servo) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099498] (-) TimerEvent: {}
+[0.122221] (xarm_moveit_servo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.129710] (xarm_moveit_servo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.194821] (xarm_moveit_servo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.199564] (-) TimerEvent: {}
+[0.200027] (xarm_moveit_servo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.200369] (xarm_moveit_servo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.200786] (xarm_moveit_servo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.203432] (xarm_moveit_servo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.282054] (xarm_moveit_servo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.287553] (xarm_moveit_servo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.287776] (xarm_moveit_servo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.288103] (xarm_moveit_servo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.296863] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299647] (-) TimerEvent: {}
+[0.399860] (-) TimerEvent: {}
+[0.500187] (-) TimerEvent: {}
+[0.600700] (-) TimerEvent: {}
+[0.617772] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.700794] (-) TimerEvent: {}
+[0.721660] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.780218] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.789225] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.800361] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.800866] (-) TimerEvent: {}
+[0.816453] (xarm_moveit_servo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.836109] (xarm_moveit_servo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.891047] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.895329] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.900935] (-) TimerEvent: {}
+[1.001224] (-) TimerEvent: {}
+[1.002078] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.033572] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.083570] (xarm_moveit_servo) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.098113] (xarm_moveit_servo) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.101274] (-) TimerEvent: {}
+[1.177577] (xarm_moveit_servo) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.177989] (xarm_moveit_servo) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.201370] (-) TimerEvent: {}
+[1.256951] (xarm_moveit_servo) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.257979] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.301471] (-) TimerEvent: {}
+[1.310220] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[1.344925] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found std_srvs: 4.9.0 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[1.355634] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.386590] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[1.401553] (-) TimerEvent: {}
+[1.456798] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found moveit_msgs: 2.2.1 (/opt/ros/humble/share/moveit_msgs/cmake)\n'}
+[1.501658] (-) TimerEvent: {}
+[1.543520] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found moveit_ros_planning: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning/cmake)\n'}
+[1.595508] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[1.601738] (-) TimerEvent: {}
+[1.701977] (-) TimerEvent: {}
+[1.739751] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[1.796586] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found parameter_traits: 0.5.0 (/opt/ros/humble/share/parameter_traits/cmake)\n'}
+[1.802034] (-) TimerEvent: {}
+[1.815758] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.15 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[1.846164] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[1.902128] (-) TimerEvent: {}
+[1.949708] (xarm_moveit_servo) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[1.989369] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.989556] (xarm_moveit_servo) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.002204] (-) TimerEvent: {}
+[2.042248] (xarm_moveit_servo) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.102312] (-) TimerEvent: {}
+[2.138282] (xarm_moveit_servo) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.140594] (xarm_moveit_servo) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.140931] (xarm_moveit_servo) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include\n'}
+[2.141010] (xarm_moveit_servo) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.142869] (xarm_moveit_servo) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.142932] (xarm_moveit_servo) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.143713] (xarm_moveit_servo) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.144671] (xarm_moveit_servo) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.145497] (xarm_moveit_servo) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.147369] (xarm_moveit_servo) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.147433] (xarm_moveit_servo) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.148277] (xarm_moveit_servo) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.150145] (xarm_moveit_servo) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.181492] (xarm_moveit_servo) StdoutLine: {'line': b'-- Generating done\n'}
+[2.190122] (xarm_moveit_servo) StdoutLine: {'line': b'-- Build files have been written to: /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo\n'}
+[2.201374] (xarm_moveit_servo) CommandEnded: {'returncode': 0}
+[2.201976] (xarm_moveit_servo) JobProgress: {'identifier': 'xarm_moveit_servo', 'progress': 'build'}
+[2.202643] (xarm_moveit_servo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo', '--', '-j16', '-l16'], 'cwd': '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'paddy'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/paddy/rrc/xarm_ws/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/install/librealsense2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/paddy/rrc/xarm_ws/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/lib'), ('HOME', '/home/paddy'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/paddy/rrc/xarm_ws/src'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('DESKTOP_SESSION', 'ubuntu-wayland'), ('NVM_BIN', '/home/paddy/.nvm/versions/node/v22.18.0/bin'), ('NVM_INC', '/home/paddy/.nvm/versions/node/v22.18.0/include/node'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1889'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '2059'), ('BUNDLED_DEBUGPY_PATH', '/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/paddy/miniconda3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2606'), ('NVM_DIR', '/home/paddy/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'paddy'), ('JOURNAL_STREAM', '8:6588'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/paddy/rrc/xarm_ws/install/librealsense2/lib/x86_64-linux-gnu/pkgconfig:/home/paddy/rrc/xarm_ws/install/librealsense2/lib/pkgconfig'), ('CLAUDE_CODE_SSE_PORT', '59670'), ('XDG_SESSION_CLASS', 'user'), ('GEMINI_CLI_IDE_WORKSPACE_PATH', '/home/paddy/rrc/xarm_ws'), ('USERNAME', 'paddy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('GEMINI_CLI_IDE_SERVER_PORT', '34633'), ('PATH', '/home/paddy/rrc/xarm_ws/install/librealsense2/bin:/opt/ros/humble/bin:/home/paddy/.nvm/versions/node/v22.18.0/bin:/home/paddy/miniconda3/condabin:/home/paddy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/bundled/scripts/noConfigScripts:/home/paddy/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/synth:@/tmp/.ICE-unix/2031,unix/synth:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', 'd031a6edd3254d48b035a0d32064546d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-4c2dd3d9881c24ae.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/paddy/.config/Code/User/workspaceStorage/9cf5a7ac8a67c54a9de65468298cdadd/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-wayland'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.MWBTF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-46cd3348ca.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install/realsense2_camera:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/install/mbot_demo'), ('CONDA_PYTHON_EXE', '/home/paddy/miniconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-wayland'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('_CONDA_EXE', '/home/paddy/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo'), ('ENABLE_IDE_INTEGRATION', 'true'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg'), ('CONDA_EXE', '/home/paddy/miniconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu-wayland:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge')]), 'shell': False}
+[2.203833] (-) TimerEvent: {}
+[2.260899] (xarm_moveit_servo) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/xarm_joystick_input.dir/src/gripper_controller.cpp.o\x1b[0m\n'}
+[2.261071] (xarm_moveit_servo) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/xarm_keyboard_input.dir/src/xarm_keyboard_input.cpp.o\x1b[0m\n'}
+[2.261125] (xarm_moveit_servo) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o\x1b[0m\n'}
+[2.303952] (-) TimerEvent: {}
+[2.404204] (-) TimerEvent: {}
+[2.504493] (-) TimerEvent: {}
+[2.604761] (-) TimerEvent: {}
+[2.705032] (-) TimerEvent: {}
+[2.805383] (-) TimerEvent: {}
+[2.905668] (-) TimerEvent: {}
+[3.005960] (-) TimerEvent: {}
+[3.106238] (-) TimerEvent: {}
+[3.206529] (-) TimerEvent: {}
+[3.307309] (-) TimerEvent: {}
+[3.407585] (-) TimerEvent: {}
+[3.507897] (-) TimerEvent: {}
+[3.608176] (-) TimerEvent: {}
+[3.708461] (-) TimerEvent: {}
+[3.808757] (-) TimerEvent: {}
+[3.909045] (-) TimerEvent: {}
+[4.009329] (-) TimerEvent: {}
+[4.109601] (-) TimerEvent: {}
+[4.209884] (-) TimerEvent: {}
+[4.310165] (-) TimerEvent: {}
+[4.410445] (-) TimerEvent: {}
+[4.510736] (-) TimerEvent: {}
+[4.530164] (xarm_moveit_servo) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:8\x1b[m\x1b[K:\n'}
+[4.530388] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KInt32\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.530466] (xarm_moveit_servo) StderrLine: {'line': b'   43 |     rclcpp::Publisher<std_msgs::msg::\x1b[01;31m\x1b[KInt32\x1b[m\x1b[K>::SharedPtr gripper_command_pub_;\n'}
+[4.530531] (xarm_moveit_servo) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.530589] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[4.530646] (xarm_moveit_servo) StderrLine: {'line': b'   43 |     rclcpp::Publisher<std_msgs::msg::Int32\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr gripper_command_pub_;\n'}
+[4.530710] (xarm_moveit_servo) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.530774] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 at end of member declaration\n'}
+[4.530831] (xarm_moveit_servo) StderrLine: {'line': b'   43 |     rclcpp::Publisher<std_msgs::msg::Int32>::\x1b[01;31m\x1b[KSharedPtr\x1b[m\x1b[K gripper_command_pub_;\n'}
+[4.530886] (xarm_moveit_servo) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.530941] (xarm_moveit_servo) StderrLine: {'line': b'      |                                                       \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[4.533613] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgripper_command_pub_\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[4.533739] (xarm_moveit_servo) StderrLine: {'line': b'   43 |     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr \x1b[01;31m\x1b[Kgripper_command_pub_\x1b[m\x1b[K;\n'}
+[4.533831] (xarm_moveit_servo) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.534302] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KInt32\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.534354] (xarm_moveit_servo) StderrLine: {'line': b'   44 |     rclcpp::Publisher<std_msgs::msg::\x1b[01;31m\x1b[KInt32\x1b[m\x1b[K>::SharedPtr gripper_state_pub_;\n'}
+[4.534395] (xarm_moveit_servo) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.534434] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[4.534475] (xarm_moveit_servo) StderrLine: {'line': b'   44 |     rclcpp::Publisher<std_msgs::msg::Int32\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr gripper_state_pub_;\n'}
+[4.534514] (xarm_moveit_servo) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.534551] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 at end of member declaration\n'}
+[4.534588] (xarm_moveit_servo) StderrLine: {'line': b'   44 |     rclcpp::Publisher<std_msgs::msg::Int32>::\x1b[01;31m\x1b[KSharedPtr\x1b[m\x1b[K gripper_state_pub_;\n'}
+[4.534627] (xarm_moveit_servo) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.534667] (xarm_moveit_servo) StderrLine: {'line': b'      |                                                       \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[4.534718] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kint xarm_moveit_servo::JoyToServoPub::SharedPtr\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.534764] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:46:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kint xarm_moveit_servo::JoyToServoPub::SharedPtr\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.534803] (xarm_moveit_servo) StderrLine: {'line': b'   43 |     rclcpp::Publisher<std_msgs::msg::Int32>::\x1b[01;36m\x1b[KSharedPtr\x1b[m\x1b[K gripper_command_pub_;\n'}
+[4.534840] (xarm_moveit_servo) StderrLine: {'line': b'      |                                              \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.536709] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgripper_state_pub_\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[4.536790] (xarm_moveit_servo) StderrLine: {'line': b'   44 |     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr \x1b[01;31m\x1b[Kgripper_state_pub_\x1b[m\x1b[K;\n'}
+[4.536837] (xarm_moveit_servo) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.596350] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kxarm_moveit_servo::JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.596532] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:112:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgripper_command_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.596594] (xarm_moveit_servo) StderrLine: {'line': b'  112 |     \x1b[01;31m\x1b[Kgripper_command_pub_\x1b[m\x1b[K = this->create_publisher<std_msgs::msg::Int32>("/gripper/command", ros_queue_size_);\n'}
+[4.596646] (xarm_moveit_servo) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.606833] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:113:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgripper_state_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.606942] (xarm_moveit_servo) StderrLine: {'line': b'  113 |     \x1b[01;31m\x1b[Kgripper_state_pub_\x1b[m\x1b[K = this->create_publisher<std_msgs::msg::Int32>("/gripper/state", ros_queue_size_);\n'}
+[4.606992] (xarm_moveit_servo) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.610797] (-) TimerEvent: {}
+[4.645976] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid xarm_moveit_servo::JoyToServoPub::_joy_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.646130] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:301:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgripper_command_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.646182] (xarm_moveit_servo) StderrLine: {'line': b'  301 |     \x1b[01;31m\x1b[Kgripper_command_pub_\x1b[m\x1b[K->publish(std::move(gripper_cmd_msg));\n'}
+[4.646226] (xarm_moveit_servo) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.651665] (xarm_moveit_servo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:302:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgripper_state_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgripper_state_msg\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.651803] (xarm_moveit_servo) StderrLine: {'line': b'  302 |     \x1b[01;31m\x1b[Kgripper_state_pub_\x1b[m\x1b[K->publish(std::move(gripper_state_msg));\n'}
+[4.651865] (xarm_moveit_servo) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.651916] (xarm_moveit_servo) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kgripper_state_msg\x1b[m\x1b[K\n'}
+[4.710930] (-) TimerEvent: {}
+[4.811223] (-) TimerEvent: {}
+[4.911492] (-) TimerEvent: {}
+[5.011765] (-) TimerEvent: {}
+[5.112040] (-) TimerEvent: {}
+[5.212305] (-) TimerEvent: {}
+[5.312573] (-) TimerEvent: {}
+[5.412841] (-) TimerEvent: {}
+[5.513512] (-) TimerEvent: {}
+[5.614211] (-) TimerEvent: {}
+[5.714478] (-) TimerEvent: {}
+[5.815165] (-) TimerEvent: {}
+[5.915435] (-) TimerEvent: {}
+[6.016100] (-) TimerEvent: {}
+[6.116381] (-) TimerEvent: {}
+[6.216646] (-) TimerEvent: {}
+[6.316925] (-) TimerEvent: {}
+[6.417189] (-) TimerEvent: {}
+[6.517461] (-) TimerEvent: {}
+[6.617742] (-) TimerEvent: {}
+[6.718010] (-) TimerEvent: {}
+[6.818287] (-) TimerEvent: {}
+[6.918551] (-) TimerEvent: {}
+[7.018828] (-) TimerEvent: {}
+[7.119100] (-) TimerEvent: {}
+[7.161666] (xarm_moveit_servo) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/xarm_joystick_input.dir/build.make:76: CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o] Error 1\n'}
+[7.161895] (xarm_moveit_servo) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/xarm_joystick_input.dir/all] Error 2\n'}
+[7.161976] (xarm_moveit_servo) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[7.219201] (-) TimerEvent: {}
+[7.319468] (-) TimerEvent: {}
+[7.348479] (xarm_moveit_servo) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX executable xarm_keyboard_input\x1b[0m\n'}
+[7.419563] (-) TimerEvent: {}
+[7.519838] (-) TimerEvent: {}
+[7.620102] (-) TimerEvent: {}
+[7.710186] (xarm_moveit_servo) StdoutLine: {'line': b'[ 80%] Built target xarm_keyboard_input\n'}
+[7.711254] (xarm_moveit_servo) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[7.713443] (xarm_moveit_servo) CommandEnded: {'returncode': 2}
+[7.720250] (-) TimerEvent: {}
+[7.721777] (xarm_moveit_servo) JobEnded: {'identifier': 'xarm_moveit_servo', 'rc': 2}
+[7.732199] (-) EventReactorShutdown: {}

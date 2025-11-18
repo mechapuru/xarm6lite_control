@@ -54,7 +54,7 @@ GripperController::~GripperController()
     portHandler_->closePort();
 }
 
-bool GripperController::moveWithVelocity(int velocity_raw)
+bool GripperController::moveWithVelocity(int velocity_raw, int32_t& current_position)
 {
     std::lock_guard<std::mutex> lock(mutex_);
 
@@ -62,8 +62,7 @@ bool GripperController::moveWithVelocity(int velocity_raw)
     int dxl_comm_result = 0;
 
     // Read present position
-    int32_t present_position = 0;
-    dxl_comm_result = packetHandler_->read4ByteTxRx(portHandler_, dxl_id_, ADDR_PRESENT_POSITION, (uint32_t*)&present_position, &dxl_error);
+    dxl_comm_result = packetHandler_->read4ByteTxRx(portHandler_, dxl_id_, ADDR_PRESENT_POSITION, (uint32_t*)&current_position, &dxl_error);
     if (dxl_comm_result != COMM_SUCCESS || dxl_error != 0) {
         log("Read Position", dxl_comm_result, dxl_error);
         return false;
@@ -74,7 +73,7 @@ bool GripperController::moveWithVelocity(int velocity_raw)
 
     // Safety check
     int32_t velocity_to_set = velocity_raw;
-    if ((present_position <= POS_MIN && velocity_raw < 0) || (present_position >= POS_MAX && velocity_raw > 0)) {
+    if ((current_position <= POS_MIN && velocity_raw < 0) || (current_position >= POS_MAX && velocity_raw > 0)) {
         velocity_to_set = 0;
     }
 

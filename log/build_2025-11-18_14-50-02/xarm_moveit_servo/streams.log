@@ -1,0 +1,119 @@
+[0.013s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo -DCMAKE_INSTALL_PREFIX=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo
+[0.071s] -- The C compiler identification is GNU 11.4.0
+[0.122s] -- The CXX compiler identification is GNU 11.4.0
+[0.129s] -- Detecting C compiler ABI info
+[0.194s] -- Detecting C compiler ABI info - done
+[0.200s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.200s] -- Detecting C compile features
+[0.200s] -- Detecting C compile features - done
+[0.203s] -- Detecting CXX compiler ABI info
+[0.282s] -- Detecting CXX compiler ABI info - done
+[0.287s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.287s] -- Detecting CXX compile features
+[0.288s] -- Detecting CXX compile features - done
+[0.296s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.617s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.721s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.780s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.789s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.800s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.816s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.836s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.891s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.895s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.002s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.033s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.083s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.098s] -- Looking for pthread.h
+[1.177s] -- Looking for pthread.h - found
+[1.178s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.257s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.258s] -- Found Threads: TRUE  
+[1.310s] -- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.345s] -- Found std_srvs: 4.9.0 (/opt/ros/humble/share/std_srvs/cmake)
+[1.355s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.386s] -- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)
+[1.456s] -- Found moveit_msgs: 2.2.1 (/opt/ros/humble/share/moveit_msgs/cmake)
+[1.543s] -- Found moveit_ros_planning: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning/cmake)
+[1.595s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[1.740s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.796s] -- Found parameter_traits: 0.5.0 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.815s] -- Found rclcpp_lifecycle: 16.0.15 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.846s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[1.949s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[1.989s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.989s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.042s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.138s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.140s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.140s] -- Configured cppcheck include dirs: /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include
+[2.141s] -- Configured cppcheck exclude dirs and/or files: 
+[2.142s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.142s] -- Configured cpplint exclude dirs and/or files: 
+[2.143s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.144s] -- Added test 'lint_cmake' to check CMake code style
+[2.145s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.147s] -- Added test 'uncrustify' to check C / C++ code style
+[2.147s] -- Configured uncrustify additional arguments: 
+[2.148s] -- Added test 'xmllint' to check XML markup files
+[2.150s] -- Configuring done
+[2.181s] -- Generating done
+[2.190s] -- Build files have been written to: /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo
+[2.201s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo -DCMAKE_INSTALL_PREFIX=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo
+[2.203s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo -- -j16 -l16
+[2.261s] [ 60%] [32mBuilding CXX object CMakeFiles/xarm_joystick_input.dir/src/gripper_controller.cpp.o[0m
+[2.261s] [ 60%] [32mBuilding CXX object CMakeFiles/xarm_keyboard_input.dir/src/xarm_keyboard_input.cpp.o[0m
+[2.261s] [ 60%] [32mBuilding CXX object CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o[0m
+[4.530s] In file included from [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:8[m[K:
+[4.530s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:38:[m[K [01;31m[Kerror: [m[K‘[01m[KInt32[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[4.530s]    43 |     rclcpp::Publisher<std_msgs::msg::[01;31m[KInt32[m[K>::SharedPtr gripper_command_pub_;
+[4.530s]       |                                      [01;31m[K^~~~~[m[K
+[4.530s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[4.530s]    43 |     rclcpp::Publisher<std_msgs::msg::Int32[01;31m[K>[m[K::SharedPtr gripper_command_pub_;
+[4.530s]       |                                           [01;31m[K^[m[K
+[4.530s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[4.530s]    43 |     rclcpp::Publisher<std_msgs::msg::Int32>::[01;31m[KSharedPtr[m[K gripper_command_pub_;
+[4.530s]       |                                              [01;31m[K^~~~~~~~~[m[K
+[4.530s]       |                                                       [32m[K;[m[K
+[4.533s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_command_pub_[m[K’ does not name a type
+[4.533s]    43 |     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr [01;31m[Kgripper_command_pub_[m[K;
+[4.533s]       |                                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.534s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:38:[m[K [01;31m[Kerror: [m[K‘[01m[KInt32[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[4.534s]    44 |     rclcpp::Publisher<std_msgs::msg::[01;31m[KInt32[m[K>::SharedPtr gripper_state_pub_;
+[4.534s]       |                                      [01;31m[K^~~~~[m[K
+[4.534s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[4.534s]    44 |     rclcpp::Publisher<std_msgs::msg::Int32[01;31m[K>[m[K::SharedPtr gripper_state_pub_;
+[4.534s]       |                                           [01;31m[K^[m[K
+[4.534s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[4.534s]    44 |     rclcpp::Publisher<std_msgs::msg::Int32>::[01;31m[KSharedPtr[m[K gripper_state_pub_;
+[4.534s]       |                                              [01;31m[K^~~~~~~~~[m[K
+[4.534s]       |                                                       [32m[K;[m[K
+[4.534s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:46:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint xarm_moveit_servo::JoyToServoPub::SharedPtr[m[K’
+[4.534s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:46:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint xarm_moveit_servo::JoyToServoPub::SharedPtr[m[K’
+[4.534s]    43 |     rclcpp::Publisher<std_msgs::msg::Int32>::[01;36m[KSharedPtr[m[K gripper_command_pub_;
+[4.534s]       |                                              [01;36m[K^~~~~~~~~[m[K
+[4.536s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_state_pub_[m[K’ does not name a type
+[4.536s]    44 |     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr [01;31m[Kgripper_state_pub_[m[K;
+[4.536s]       |                                                        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.596s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:[m[K In constructor ‘[01m[Kxarm_moveit_servo::JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions&)[m[K’:
+[4.596s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:112:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_command_pub_[m[K’ was not declared in this scope
+[4.596s]   112 |     [01;31m[Kgripper_command_pub_[m[K = this->create_publisher<std_msgs::msg::Int32>("/gripper/command", ros_queue_size_);
+[4.596s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.606s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:113:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_state_pub_[m[K’ was not declared in this scope
+[4.606s]   113 |     [01;31m[Kgripper_state_pub_[m[K = this->create_publisher<std_msgs::msg::Int32>("/gripper/state", ros_queue_size_);
+[4.607s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.646s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:[m[K In member function ‘[01m[Kvoid xarm_moveit_servo::JoyToServoPub::_joy_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.646s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:301:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_command_pub_[m[K’ was not declared in this scope
+[4.646s]   301 |     [01;31m[Kgripper_command_pub_[m[K->publish(std::move(gripper_cmd_msg));
+[4.646s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.651s] [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:302:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_state_pub_[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_state_msg[m[K’?
+[4.651s]   302 |     [01;31m[Kgripper_state_pub_[m[K->publish(std::move(gripper_state_msg));
+[4.651s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.651s]       |     [32m[Kgripper_state_msg[m[K
+[7.161s] gmake[2]: *** [CMakeFiles/xarm_joystick_input.dir/build.make:76: CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o] Error 1
+[7.161s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/xarm_joystick_input.dir/all] Error 2
+[7.162s] gmake[1]: *** Waiting for unfinished jobs....
+[7.348s] [ 80%] [32m[1mLinking CXX executable xarm_keyboard_input[0m
+[7.710s] [ 80%] Built target xarm_keyboard_input
+[7.711s] gmake: *** [Makefile:146: all] Error 2
+[7.713s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo -- -j16 -l16

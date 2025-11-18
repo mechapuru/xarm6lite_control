@@ -1,0 +1,39 @@
+[35m[1mConsolidate compiler generated dependencies of target xarm_keyboard_input[0m
+[35m[1mConsolidate compiler generated dependencies of target xarm_joystick_input[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o[0m
+[ 60%] Built target xarm_keyboard_input
+[ 80%] [32m[1mLinking CXX shared library libxarm_joystick_input.so[0m
+[100%] Built target xarm_joystick_input
+-- Install configuration: ""
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/libxarm_joystick_input.so
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/xarm_moveit_servo/xarm_keyboard_input
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//config
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//config/xarm_moveit_servo_config.yaml
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/xarm_moveit_servo_realmove.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/uf850_moveit_servo_fake.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo_realmove.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/uf850_moveit_servo_realmove.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/lite6_moveit_servo_fake.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/xarm_moveit_servo_fake.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo_fake.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/lite6_moveit_servo_realmove.launch.py
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//rviz
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//rviz/servo.rviz
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/package_run_dependencies/xarm_moveit_servo
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/parent_prefix_path/xarm_moveit_servo
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/ament_prefix_path.sh
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/ament_prefix_path.dsv
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/path.sh
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/path.dsv
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.bash
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.sh
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.zsh
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.dsv
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.dsv
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/packages/xarm_moveit_servo
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/rclcpp_components/xarm_moveit_servo
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/cmake/xarm_moveit_servoConfig.cmake
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/cmake/xarm_moveit_servoConfig-version.cmake
+-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.xml

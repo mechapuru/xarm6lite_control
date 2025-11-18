@@ -1,0 +1,154 @@
+[0.000000] (-) TimerEvent: {}
+[0.000219] (-) JobUnselected: {'identifier': 'd435i_xarm_setup'}
+[0.000388] (-) JobUnselected: {'identifier': 'mbot_demo'}
+[0.000408] (-) JobUnselected: {'identifier': 'realsense2_camera'}
+[0.000424] (-) JobUnselected: {'identifier': 'realsense2_camera_msgs'}
+[0.000439] (-) JobUnselected: {'identifier': 'realsense2_description'}
+[0.000453] (-) JobUnselected: {'identifier': 'realsense2_ros_mqtt_bridge'}
+[0.000466] (-) JobUnselected: {'identifier': 'realsense2_rviz_plugin'}
+[0.000480] (-) JobUnselected: {'identifier': 'realsense_gazebo_plugin'}
+[0.000494] (-) JobUnselected: {'identifier': 'uf_ros_lib'}
+[0.000507] (-) JobUnselected: {'identifier': 'xarm_api'}
+[0.000520] (-) JobUnselected: {'identifier': 'xarm_controller'}
+[0.000534] (-) JobUnselected: {'identifier': 'xarm_description'}
+[0.000547] (-) JobUnselected: {'identifier': 'xarm_gazebo'}
+[0.000560] (-) JobUnselected: {'identifier': 'xarm_moveit_config'}
+[0.000573] (-) JobUnselected: {'identifier': 'xarm_msgs'}
+[0.000585] (-) JobUnselected: {'identifier': 'xarm_planner'}
+[0.000598] (-) JobUnselected: {'identifier': 'xarm_sdk'}
+[0.000613] (xarm_moveit_servo) JobQueued: {'identifier': 'xarm_moveit_servo', 'dependencies': OrderedDict([('uf_ros_lib', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib'), ('xarm_description', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description'), ('xarm_msgs', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs'), ('xarm_sdk', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk'), ('xarm_api', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api'), ('xarm_controller', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller'), ('xarm_gazebo', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo'), ('xarm_moveit_config', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config')])}
+[0.000644] (xarm_moveit_servo) JobStarted: {'identifier': 'xarm_moveit_servo'}
+[0.009225] (xarm_moveit_servo) JobProgress: {'identifier': 'xarm_moveit_servo', 'progress': 'cmake'}
+[0.009813] (xarm_moveit_servo) JobProgress: {'identifier': 'xarm_moveit_servo', 'progress': 'build'}
+[0.010548] (xarm_moveit_servo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo', '--', '-j16', '-l16'], 'cwd': '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'paddy'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/paddy/rrc/xarm_ws/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/install/librealsense2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/paddy/rrc/xarm_ws/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/lib'), ('HOME', '/home/paddy'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/paddy/rrc/xarm_ws/src'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('DESKTOP_SESSION', 'ubuntu-wayland'), ('NVM_BIN', '/home/paddy/.nvm/versions/node/v22.18.0/bin'), ('NVM_INC', '/home/paddy/.nvm/versions/node/v22.18.0/include/node'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1889'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '2059'), ('BUNDLED_DEBUGPY_PATH', '/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/paddy/miniconda3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2606'), ('NVM_DIR', '/home/paddy/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'paddy'), ('JOURNAL_STREAM', '8:6588'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/paddy/rrc/xarm_ws/install/librealsense2/lib/x86_64-linux-gnu/pkgconfig:/home/paddy/rrc/xarm_ws/install/librealsense2/lib/pkgconfig'), ('CLAUDE_CODE_SSE_PORT', '59670'), ('XDG_SESSION_CLASS', 'user'), ('GEMINI_CLI_IDE_WORKSPACE_PATH', '/home/paddy/rrc/xarm_ws'), ('USERNAME', 'paddy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('GEMINI_CLI_IDE_SERVER_PORT', '34633'), ('PATH', '/home/paddy/rrc/xarm_ws/install/librealsense2/bin:/opt/ros/humble/bin:/home/paddy/.nvm/versions/node/v22.18.0/bin:/home/paddy/miniconda3/condabin:/home/paddy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/bundled/scripts/noConfigScripts:/home/paddy/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/synth:@/tmp/.ICE-unix/2031,unix/synth:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', 'd031a6edd3254d48b035a0d32064546d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-4c2dd3d9881c24ae.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/paddy/.config/Code/User/workspaceStorage/9cf5a7ac8a67c54a9de65468298cdadd/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-wayland'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.MWBTF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-46cd3348ca.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install/realsense2_camera:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/install/mbot_demo'), ('CONDA_PYTHON_EXE', '/home/paddy/miniconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-wayland'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('_CONDA_EXE', '/home/paddy/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo'), ('ENABLE_IDE_INTEGRATION', 'true'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg'), ('CONDA_EXE', '/home/paddy/miniconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu-wayland:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge')]), 'shell': False}
+[0.059766] (xarm_moveit_servo) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target xarm_keyboard_input\x1b[0m\n'}
+[0.059985] (xarm_moveit_servo) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target xarm_joystick_input\x1b[0m\n'}
+[0.079433] (xarm_moveit_servo) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o\x1b[0m\n'}
+[0.079598] (xarm_moveit_servo) StdoutLine: {'line': b'[ 60%] Built target xarm_keyboard_input\n'}
+[0.099803] (-) TimerEvent: {}
+[0.200033] (-) TimerEvent: {}
+[0.300330] (-) TimerEvent: {}
+[0.400603] (-) TimerEvent: {}
+[0.500872] (-) TimerEvent: {}
+[0.601146] (-) TimerEvent: {}
+[0.701436] (-) TimerEvent: {}
+[0.801710] (-) TimerEvent: {}
+[0.901993] (-) TimerEvent: {}
+[1.002277] (-) TimerEvent: {}
+[1.102561] (-) TimerEvent: {}
+[1.202832] (-) TimerEvent: {}
+[1.303160] (-) TimerEvent: {}
+[1.403463] (-) TimerEvent: {}
+[1.503746] (-) TimerEvent: {}
+[1.604036] (-) TimerEvent: {}
+[1.704329] (-) TimerEvent: {}
+[1.804600] (-) TimerEvent: {}
+[1.904875] (-) TimerEvent: {}
+[2.005133] (-) TimerEvent: {}
+[2.105684] (-) TimerEvent: {}
+[2.205998] (-) TimerEvent: {}
+[2.306308] (-) TimerEvent: {}
+[2.406588] (-) TimerEvent: {}
+[2.506866] (-) TimerEvent: {}
+[2.607168] (-) TimerEvent: {}
+[2.707431] (-) TimerEvent: {}
+[2.807713] (-) TimerEvent: {}
+[2.907996] (-) TimerEvent: {}
+[3.008279] (-) TimerEvent: {}
+[3.108556] (-) TimerEvent: {}
+[3.208830] (-) TimerEvent: {}
+[3.309126] (-) TimerEvent: {}
+[3.409394] (-) TimerEvent: {}
+[3.509668] (-) TimerEvent: {}
+[3.610015] (-) TimerEvent: {}
+[3.710338] (-) TimerEvent: {}
+[3.810624] (-) TimerEvent: {}
+[3.910907] (-) TimerEvent: {}
+[4.011186] (-) TimerEvent: {}
+[4.111469] (-) TimerEvent: {}
+[4.211749] (-) TimerEvent: {}
+[4.312028] (-) TimerEvent: {}
+[4.412323] (-) TimerEvent: {}
+[4.512599] (-) TimerEvent: {}
+[4.612903] (-) TimerEvent: {}
+[4.713208] (-) TimerEvent: {}
+[4.813499] (-) TimerEvent: {}
+[4.913787] (-) TimerEvent: {}
+[5.014064] (-) TimerEvent: {}
+[5.114343] (-) TimerEvent: {}
+[5.214615] (-) TimerEvent: {}
+[5.314883] (-) TimerEvent: {}
+[5.415146] (-) TimerEvent: {}
+[5.515412] (-) TimerEvent: {}
+[5.615681] (-) TimerEvent: {}
+[5.715949] (-) TimerEvent: {}
+[5.816232] (-) TimerEvent: {}
+[5.916502] (-) TimerEvent: {}
+[6.016787] (-) TimerEvent: {}
+[6.117060] (-) TimerEvent: {}
+[6.217335] (-) TimerEvent: {}
+[6.317608] (-) TimerEvent: {}
+[6.417879] (-) TimerEvent: {}
+[6.518153] (-) TimerEvent: {}
+[6.618424] (-) TimerEvent: {}
+[6.718693] (-) TimerEvent: {}
+[6.818962] (-) TimerEvent: {}
+[6.919255] (-) TimerEvent: {}
+[7.019543] (-) TimerEvent: {}
+[7.119814] (-) TimerEvent: {}
+[7.220088] (-) TimerEvent: {}
+[7.320359] (-) TimerEvent: {}
+[7.420629] (-) TimerEvent: {}
+[7.520904] (-) TimerEvent: {}
+[7.621177] (-) TimerEvent: {}
+[7.721463] (-) TimerEvent: {}
+[7.821757] (-) TimerEvent: {}
+[7.922040] (-) TimerEvent: {}
+[8.022338] (-) TimerEvent: {}
+[8.104429] (xarm_moveit_servo) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libxarm_joystick_input.so\x1b[0m\n'}
+[8.122408] (-) TimerEvent: {}
+[8.222665] (-) TimerEvent: {}
+[8.322955] (-) TimerEvent: {}
+[8.423295] (-) TimerEvent: {}
+[8.523851] (-) TimerEvent: {}
+[8.624149] (-) TimerEvent: {}
+[8.642533] (xarm_moveit_servo) StdoutLine: {'line': b'[100%] Built target xarm_joystick_input\n'}
+[8.656176] (xarm_moveit_servo) CommandEnded: {'returncode': 0}
+[8.656754] (xarm_moveit_servo) JobProgress: {'identifier': 'xarm_moveit_servo', 'progress': 'install'}
+[8.665959] (xarm_moveit_servo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo'], 'cwd': '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'paddy'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/paddy/rrc/xarm_ws/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/install/librealsense2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/paddy/rrc/xarm_ws/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/lib'), ('HOME', '/home/paddy'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/paddy/rrc/xarm_ws/src'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('DESKTOP_SESSION', 'ubuntu-wayland'), ('NVM_BIN', '/home/paddy/.nvm/versions/node/v22.18.0/bin'), ('NVM_INC', '/home/paddy/.nvm/versions/node/v22.18.0/include/node'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1889'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '2059'), ('BUNDLED_DEBUGPY_PATH', '/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/paddy/miniconda3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2606'), ('NVM_DIR', '/home/paddy/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'paddy'), ('JOURNAL_STREAM', '8:6588'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/paddy/rrc/xarm_ws/install/librealsense2/lib/x86_64-linux-gnu/pkgconfig:/home/paddy/rrc/xarm_ws/install/librealsense2/lib/pkgconfig'), ('CLAUDE_CODE_SSE_PORT', '59670'), ('XDG_SESSION_CLASS', 'user'), ('GEMINI_CLI_IDE_WORKSPACE_PATH', '/home/paddy/rrc/xarm_ws'), ('USERNAME', 'paddy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('GEMINI_CLI_IDE_SERVER_PORT', '34633'), ('PATH', '/home/paddy/rrc/xarm_ws/install/librealsense2/bin:/opt/ros/humble/bin:/home/paddy/.nvm/versions/node/v22.18.0/bin:/home/paddy/miniconda3/condabin:/home/paddy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/bundled/scripts/noConfigScripts:/home/paddy/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/synth:@/tmp/.ICE-unix/2031,unix/synth:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', 'd031a6edd3254d48b035a0d32064546d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/paddy/.vscode/extensions/ms-python.debugpy-2025.16.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-4c2dd3d9881c24ae.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/paddy/.config/Code/User/workspaceStorage/9cf5a7ac8a67c54a9de65468298cdadd/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-wayland'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.MWBTF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-46cd3348ca.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install/realsense2_camera:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/install/mbot_demo'), ('CONDA_PYTHON_EXE', '/home/paddy/miniconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-wayland'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('_CONDA_EXE', '/home/paddy/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo'), ('ENABLE_IDE_INTEGRATION', 'true'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg'), ('CONDA_EXE', '/home/paddy/miniconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu-wayland:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge')]), 'shell': False}
+[8.674455] (xarm_moveit_servo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.674596] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/libxarm_joystick_input.so\n'}
+[8.684204] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/xarm_moveit_servo/xarm_keyboard_input\n'}
+[8.686030] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//config\n'}
+[8.686145] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//config/xarm_moveit_servo_config.yaml\n'}
+[8.686259] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch\n'}
+[8.686360] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/xarm_moveit_servo_realmove.launch.py\n'}
+[8.686564] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/uf850_moveit_servo_fake.launch.py\n'}
+[8.686788] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo_realmove.launch.py\n'}
+[8.687154] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/uf850_moveit_servo_realmove.launch.py\n'}
+[8.687374] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/lite6_moveit_servo_fake.launch.py\n'}
+[8.687599] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/xarm_moveit_servo_fake.launch.py\n'}
+[8.687763] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo.launch.py\n'}
+[8.688016] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo_fake.launch.py\n'}
+[8.688209] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/lite6_moveit_servo_realmove.launch.py\n'}
+[8.688318] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//rviz\n'}
+[8.688393] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//rviz/servo.rviz\n'}
+[8.688770] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/package_run_dependencies/xarm_moveit_servo\n'}
+[8.688963] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/parent_prefix_path/xarm_moveit_servo\n'}
+[8.689159] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/ament_prefix_path.sh\n'}
+[8.689295] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/ament_prefix_path.dsv\n'}
+[8.689430] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/path.sh\n'}
+[8.689565] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/path.dsv\n'}
+[8.689694] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.bash\n'}
+[8.689829] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.sh\n'}
+[8.689964] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.zsh\n'}
+[8.690102] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.dsv\n'}
+[8.690234] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.dsv\n'}
+[8.690461] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/packages/xarm_moveit_servo\n'}
+[8.690635] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/rclcpp_components/xarm_moveit_servo\n'}
+[8.690818] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/cmake/xarm_moveit_servoConfig.cmake\n'}
+[8.690935] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/cmake/xarm_moveit_servoConfig-version.cmake\n'}
+[8.691065] (xarm_moveit_servo) StdoutLine: {'line': b'-- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.xml\n'}
+[8.692794] (xarm_moveit_servo) CommandEnded: {'returncode': 0}
+[8.707565] (xarm_moveit_servo) JobEnded: {'identifier': 'xarm_moveit_servo', 'rc': 0}
+[8.708034] (-) EventReactorShutdown: {}

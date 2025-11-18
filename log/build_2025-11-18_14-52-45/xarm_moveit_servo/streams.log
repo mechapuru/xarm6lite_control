@@ -1,0 +1,43 @@
+[0.012s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo -- -j16 -l16
+[0.059s] [35m[1mConsolidate compiler generated dependencies of target xarm_keyboard_input[0m
+[0.059s] [35m[1mConsolidate compiler generated dependencies of target xarm_joystick_input[0m
+[0.079s] [ 40%] [32mBuilding CXX object CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o[0m
+[0.079s] [ 60%] Built target xarm_keyboard_input
+[8.104s] [ 80%] [32m[1mLinking CXX shared library libxarm_joystick_input.so[0m
+[8.642s] [100%] Built target xarm_joystick_input
+[8.656s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo -- -j16 -l16
+[8.666s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --install /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo
+[8.674s] -- Install configuration: ""
+[8.674s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/libxarm_joystick_input.so
+[8.684s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/xarm_moveit_servo/xarm_keyboard_input
+[8.685s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//config
+[8.686s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//config/xarm_moveit_servo_config.yaml
+[8.686s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch
+[8.686s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/xarm_moveit_servo_realmove.launch.py
+[8.686s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/uf850_moveit_servo_fake.launch.py
+[8.686s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo_realmove.launch.py
+[8.687s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/uf850_moveit_servo_realmove.launch.py
+[8.687s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/lite6_moveit_servo_fake.launch.py
+[8.687s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/xarm_moveit_servo_fake.launch.py
+[8.687s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo.launch.py
+[8.687s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/_robot_moveit_servo_fake.launch.py
+[8.688s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//launch/lite6_moveit_servo_realmove.launch.py
+[8.688s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//rviz
+[8.688s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo//rviz/servo.rviz
+[8.688s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/package_run_dependencies/xarm_moveit_servo
+[8.688s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/parent_prefix_path/xarm_moveit_servo
+[8.689s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/ament_prefix_path.sh
+[8.689s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/ament_prefix_path.dsv
+[8.689s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/path.sh
+[8.689s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/environment/path.dsv
+[8.689s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.bash
+[8.689s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.sh
+[8.689s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.zsh
+[8.689s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/local_setup.dsv
+[8.690s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.dsv
+[8.690s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/packages/xarm_moveit_servo
+[8.690s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/ament_index/resource_index/rclcpp_components/xarm_moveit_servo
+[8.690s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/cmake/xarm_moveit_servoConfig.cmake
+[8.690s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/cmake/xarm_moveit_servoConfig-version.cmake
+[8.690s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.xml
+[8.693s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --install /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo

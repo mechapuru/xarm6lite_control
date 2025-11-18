@@ -6,6 +6,7 @@
  ============================================================================*/
 
 #include "xarm_moveit_servo/xarm_joystick_input.h"
+#include <std_msgs/msg/int32.hpp> // Include for std_msgs::msg::Int32
 
 
 namespace xarm_moveit_servo
@@ -106,6 +107,10 @@ JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions& options)
     
     // Initialize Gripper Controller
     gripper_controller_ = std::make_unique<GripperController>(gripper_port, gripper_baudrate);
+
+    // Initialize Gripper Publishers
+    gripper_command_pub_ = this->create_publisher<std_msgs::msg::Int32>("/gripper/command", ros_queue_size_);
+    gripper_state_pub_ = this->create_publisher<std_msgs::msg::Int32>("/gripper/state", ros_queue_size_);
 
     if (cartesian_command_in_topic_.rfind("~/", 0) == 0) {
         cartesian_command_in_topic_ = "/servo_server/" + cartesian_command_in_topic_.substr(2, cartesian_command_in_topic_.length());
@@ -272,18 +277,32 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     // RCLCPP_INFO(this->get_logger(), "axes_str: %s", axes_str.c_str());
     // return;
 
+    // This is the new logic for gripper control and publishing
+    int32_t gripper_cmd_velocity = 0;
+    int32_t gripper_current_pos = 0;
+    auto gripper_cmd_msg = std::make_unique<std_msgs::msg::Int32>();
+    auto gripper_state_msg = std::make_unique<std_msgs::msg::Int32>();
+
     if (joystick_type_ == JOYSTICK_XBOX360_WIRED || joystick_type_ == JOYSTICK_XBOX360_WIRELESS)
     {
         if (msg->buttons[XBOX360_BTN_A]) {
-            gripper_controller_->moveWithVelocity(GRIPPER_OPEN_VELOCITY);
+            gripper_cmd_velocity = GRIPPER_OPEN_VELOCITY;
         } else if (msg->buttons[XBOX360_BTN_B]) {
-            gripper_controller_->moveWithVelocity(GRIPPER_CLOSE_VELOCITY);
-        } else {
-            gripper_controller_->moveWithVelocity(0);
+            gripper_cmd_velocity = GRIPPER_CLOSE_VELOCITY;
         }
     }
+    
+    // Send command and get state
+    gripper_controller_->moveWithVelocity(gripper_cmd_velocity, gripper_current_pos);
 
-    // Create the messages we might publish
+    // Publish both command and state
+    gripper_cmd_msg->data = gripper_cmd_velocity;
+    gripper_state_msg->data = gripper_current_pos;
+    gripper_command_pub_->publish(std::move(gripper_cmd_msg));
+    gripper_state_pub_->publish(std::move(gripper_state_msg));
+
+
+    // Create the messages we might publish for the arm
     auto twist_msg = std::make_unique<geometry_msgs::msg::TwistStamped>();
     auto joint_msg = std::make_unique<control_msgs::msg::JointJog>();
 

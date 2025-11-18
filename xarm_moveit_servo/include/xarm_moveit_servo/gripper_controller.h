@@ -20,7 +20,7 @@ class GripperController
 public:
     GripperController(const std::string& port_name, uint32_t baud_rate);
     ~GripperController();
-    bool moveWithVelocity(int velocity_raw);
+    bool moveWithVelocity(int velocity_raw, int32_t& current_position);
 
 private:
     // Dynamixel SDK handlers

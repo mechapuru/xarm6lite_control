@@ -1,0 +1,50 @@
+In file included from [01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:8[m[K:
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:38:[m[K [01;31m[Kerror: [m[K‘[01m[KInt32[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   43 |     rclcpp::Publisher<std_msgs::msg::[01;31m[KInt32[m[K>::SharedPtr gripper_command_pub_;
+      |                                      [01;31m[K^~~~~[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   43 |     rclcpp::Publisher<std_msgs::msg::Int32[01;31m[K>[m[K::SharedPtr gripper_command_pub_;
+      |                                           [01;31m[K^[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   43 |     rclcpp::Publisher<std_msgs::msg::Int32>::[01;31m[KSharedPtr[m[K gripper_command_pub_;
+      |                                              [01;31m[K^~~~~~~~~[m[K
+      |                                                       [32m[K;[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_command_pub_[m[K’ does not name a type
+   43 |     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr [01;31m[Kgripper_command_pub_[m[K;
+      |                                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:38:[m[K [01;31m[Kerror: [m[K‘[01m[KInt32[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   44 |     rclcpp::Publisher<std_msgs::msg::[01;31m[KInt32[m[K>::SharedPtr gripper_state_pub_;
+      |                                      [01;31m[K^~~~~[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   44 |     rclcpp::Publisher<std_msgs::msg::Int32[01;31m[K>[m[K::SharedPtr gripper_state_pub_;
+      |                                           [01;31m[K^[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   44 |     rclcpp::Publisher<std_msgs::msg::Int32>::[01;31m[KSharedPtr[m[K gripper_state_pub_;
+      |                                              [01;31m[K^~~~~~~~~[m[K
+      |                                                       [32m[K;[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:46:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint xarm_moveit_servo::JoyToServoPub::SharedPtr[m[K’
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:43:46:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint xarm_moveit_servo::JoyToServoPub::SharedPtr[m[K’
+   43 |     rclcpp::Publisher<std_msgs::msg::Int32>::[01;36m[KSharedPtr[m[K gripper_command_pub_;
+      |                                              [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h:44:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_state_pub_[m[K’ does not name a type
+   44 |     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr [01;31m[Kgripper_state_pub_[m[K;
+      |                                                        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:[m[K In constructor ‘[01m[Kxarm_moveit_servo::JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:112:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_command_pub_[m[K’ was not declared in this scope
+  112 |     [01;31m[Kgripper_command_pub_[m[K = this->create_publisher<std_msgs::msg::Int32>("/gripper/command", ros_queue_size_);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:113:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_state_pub_[m[K’ was not declared in this scope
+  113 |     [01;31m[Kgripper_state_pub_[m[K = this->create_publisher<std_msgs::msg::Int32>("/gripper/state", ros_queue_size_);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:[m[K In member function ‘[01m[Kvoid xarm_moveit_servo::JoyToServoPub::_joy_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:301:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_command_pub_[m[K’ was not declared in this scope
+  301 |     [01;31m[Kgripper_command_pub_[m[K->publish(std::move(gripper_cmd_msg));
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp:302:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_state_pub_[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_state_msg[m[K’?
+  302 |     [01;31m[Kgripper_state_pub_[m[K->publish(std::move(gripper_state_msg));
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |     [32m[Kgripper_state_msg[m[K
+gmake[2]: *** [CMakeFiles/xarm_joystick_input.dir/build.make:76: CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/xarm_joystick_input.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

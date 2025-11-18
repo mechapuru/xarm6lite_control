@@ -15,6 +15,7 @@
 #include <std_srvs/srv/trigger.hpp>
 #include <moveit_msgs/msg/planning_scene.hpp>
 #include "xarm_moveit_servo/gripper_controller.h"
+#include "std_msgs/msg/int32.hpp"
 
 
 namespace xarm_moveit_servo
@@ -40,6 +41,8 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;
     rclcpp::Publisher<geometry_msgs::msg::TwistStamped>::SharedPtr twist_pub_;
     rclcpp::Publisher<control_msgs::msg::JointJog>::SharedPtr joint_pub_;
+    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr gripper_command_pub_;
+    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr gripper_state_pub_;
     rclcpp::Publisher<moveit_msgs::msg::PlanningScene>::SharedPtr collision_pub_;
     rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr servo_start_client_;
 
