@@ -1,0 +1,20 @@
+{
+  "package_name": "realsense2_camera_msgs",
+  "non_idl_tuples": [
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:msg/IMUInfo.msg",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:msg/Extrinsics.msg",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:msg/Metadata.msg",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:msg/RGBD.msg",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/DeviceInfo.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/SafetyPresetRead.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/SafetyPresetWrite.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/SafetyInterfaceConfigRead.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/SafetyInterfaceConfigWrite.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/CalibConfigRead.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/CalibConfigWrite.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/ApplicationConfigRead.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/ApplicationConfigWrite.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:srv/HardwareMonitorCommandSend.srv",
+    "/home/paddy/rrc/xarm_ws/src/xarm_ros2/realsense-ros/realsense2_camera_msgs:action/TriggeredCalibration.action"
+  ]
+}

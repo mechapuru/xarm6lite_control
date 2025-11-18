@@ -1,0 +1,124 @@
+[0.049s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_sdk -DCMAKE_INSTALL_PREFIX=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk
+[0.477s] -- The C compiler identification is GNU 11.4.0
+[0.477s] -- The CXX compiler identification is GNU 11.4.0
+[0.477s] -- Detecting C compiler ABI info
+[0.477s] -- Detecting C compiler ABI info - done
+[0.478s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.478s] -- Detecting C compile features
+[0.478s] -- Detecting C compile features - done
+[0.478s] -- Detecting CXX compiler ABI info
+[0.478s] -- Detecting CXX compiler ABI info - done
+[0.478s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.478s] -- Detecting CXX compile features
+[0.478s] -- Detecting CXX compile features - done
+[0.478s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.757s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.889s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.990s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.008s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.008s] -- Configured cppcheck include dirs: /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_sdk/cxx/include
+[1.008s] -- Configured cppcheck exclude dirs and/or files: 
+[1.024s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.024s] -- Configured cpplint exclude dirs and/or files: 
+[1.031s] -- Added test 'lint_cmake' to check CMake code style
+[1.049s] -- Added test 'uncrustify' to check C / C++ code style
+[1.049s] -- Configured uncrustify additional arguments: 
+[1.052s] -- Added test 'xmllint' to check XML markup files
+[1.055s] -- Configuring done
+[1.065s] -- Generating done
+[1.067s] -- Build files have been written to: /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk
+[1.076s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_sdk -DCMAKE_INSTALL_PREFIX=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk
+[1.078s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk -- -j16 -l16
+[1.162s] [  6%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/list_ports/list_ports_linux.cc.o[0m
+[1.162s] [  6%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/unix.cc.o[0m
+[1.162s] [  9%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/list_ports/list_ports_win.cc.o[0m
+[1.162s] [ 12%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/serial.cc.o[0m
+[1.162s] [ 18%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/common/queue_memcpy.cc.o[0m
+[1.162s] [ 21%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/win.cc.o[0m
+[1.163s] [ 21%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/list_ports/list_ports_osx.cc.o[0m
+[1.164s] [ 25%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/common/crc16.cc.o[0m
+[1.170s] [ 31%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/debug/debug_print.cc.o[0m
+[1.170s] [ 31%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/connect.cc.o[0m
+[1.170s] [ 34%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/port/ser.cc.o[0m
+[1.178s] [ 43%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/instruction/uxbus_cmd.cc.o[0m
+[1.178s] [ 43%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/port/socket.cc.o[0m
+[1.178s] [ 43%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/instruction/uxbus_cmd_ser.cc.o[0m
+[1.179s] [ 46%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/instruction/uxbus_cmd_tcp.cc.o[0m
+[1.186s] [ 50%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/os/network.cc.o[0m
+[1.222s] [ 53%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/report_data.cc.o[0m
+[1.232s] [ 56%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_api.cc.o[0m
+[1.242s] [ 59%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_bio.cc.o[0m
+[1.256s] [ 62%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_ft_sensor.cc.o[0m
+[1.262s] [ 65%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_events.cc.o[0m
+[1.605s] [ 68%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_gpio.cc.o[0m
+[1.768s] [ 71%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_gripper.cc.o[0m
+[1.944s] [ 75%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_linear_motor.cc.o[0m
+[1.967s] [ 78%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_modbus_tcp.cc.o[0m
+[1.975s] [ 81%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_motion.cc.o[0m
+[2.001s] [ 84%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_params.cc.o[0m
+[2.164s] [ 87%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_record.cc.o[0m
+[2.257s] [ 90%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_report.cc.o[0m
+[2.267s] [ 93%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_robotiq.cc.o[0m
+[2.283s] [ 96%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_servo.cc.o[0m
+[5.250s] [100%] [32m[1mLinking CXX shared library libxarm_cxx_sdk.so[0m
+[5.521s] [100%] Built target xarm_cxx_sdk
+[5.538s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk -- -j16 -l16
+[5.540s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --install /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk
+[5.550s] -- Install configuration: ""
+[5.550s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/environment/library_path.sh
+[5.550s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/environment/library_path.dsv
+[5.550s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include
+[5.551s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm
+[5.551s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core
+[5.551s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/os
+[5.551s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/os/network.h
+[5.551s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/os/bak
+[5.551s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/os/bak/thread.h
+[5.551s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/instruction
+[5.551s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd.h
+[5.552s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/instruction/servo3_config.h
+[5.552s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_ser.h
+[5.552s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_tcp.h
+[5.552s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_config.h
+[5.552s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/connect.h
+[5.553s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/xarm_config.h
+[5.553s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/common
+[5.553s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/common/crc16.h
+[5.553s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/common/queue_memcpy.h
+[5.553s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/common/data_type.h
+[5.553s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/report_data.h
+[5.554s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/debug
+[5.554s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/debug/debug_print.h
+[5.554s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/port
+[5.554s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/port/ser.h
+[5.554s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/core/port/socket.h
+[5.554s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/wrapper
+[5.555s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/wrapper/common
+[5.555s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/wrapper/common/utils.h
+[5.555s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/wrapper/common/timer.h
+[5.555s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/xarm/wrapper/xarm_api.h
+[5.555s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/serial
+[5.556s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/serial/v8stdint.h
+[5.556s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/serial/impl
+[5.556s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/serial/impl/win.h
+[5.556s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/serial/impl/unix.h
+[5.556s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/cxx/include/serial/serial.h
+[5.557s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib/libxarm_cxx_sdk.so
+[5.560s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/ament_index/resource_index/package_run_dependencies/xarm_sdk
+[5.560s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/ament_index/resource_index/parent_prefix_path/xarm_sdk
+[5.561s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/environment/ament_prefix_path.sh
+[5.561s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/environment/ament_prefix_path.dsv
+[5.561s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/environment/path.sh
+[5.561s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/environment/path.dsv
+[5.562s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/local_setup.bash
+[5.562s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/local_setup.sh
+[5.562s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/local_setup.zsh
+[5.562s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/local_setup.dsv
+[5.562s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/package.dsv
+[5.562s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/ament_index/resource_index/packages/xarm_sdk
+[5.563s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[5.563s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.563s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig.cmake
+[5.563s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig-version.cmake
+[5.563s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/package.xml
+[5.566s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge /usr/bin/cmake --install /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk

@@ -1,0 +1,119 @@
+[0.026s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_controller -DCMAKE_INSTALL_PREFIX=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller
+[0.103s] -- The C compiler identification is GNU 11.4.0
+[0.172s] -- The CXX compiler identification is GNU 11.4.0
+[0.181s] -- Detecting C compiler ABI info
+[0.285s] -- Detecting C compiler ABI info - done
+[0.293s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.293s] -- Detecting C compile features
+[0.294s] -- Detecting C compile features - done
+[0.297s] -- Detecting CXX compiler ABI info
+[0.408s] -- Detecting CXX compiler ABI info - done
+[0.416s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.416s] -- Detecting CXX compile features
+[0.416s] -- Detecting CXX compile features - done
+[0.423s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.887s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.046s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.165s] -- Found hardware_interface: 2.52.0 (/opt/ros/humble/share/hardware_interface/cmake)
+[1.240s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.252s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.268s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.286s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.313s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.656s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.666s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.718s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.828s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.832s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.860s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.865s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.877s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.893s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.914s] -- Looking for pthread.h
+[2.023s] -- Looking for pthread.h - found
+[2.023s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.174s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.176s] -- Found Threads: TRUE  
+[2.266s] -- Found rclcpp_action: 16.0.15 (/opt/ros/humble/share/rclcpp_action/cmake)
+[2.292s] -- Found controller_manager_msgs: 2.52.0 (/opt/ros/humble/share/controller_manager_msgs/cmake)
+[2.317s] -- Found xarm_msgs: 0.0.0 (/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/share/xarm_msgs/cmake)
+[2.338s] -- Found xarm_api: 0.0.0 (/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/share/xarm_api/cmake)
+[2.340s] -- Found xarm_sdk: 0.0.0 (/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/share/xarm_sdk/cmake)
+[2.355s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.362s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.363s] -- Configured cppcheck include dirs: /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_controller/include
+[2.363s] -- Configured cppcheck exclude dirs and/or files: 
+[2.367s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.368s] -- Configured cpplint exclude dirs and/or files: 
+[2.369s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.372s] -- Added test 'lint_cmake' to check CMake code style
+[2.373s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.378s] -- Added test 'uncrustify' to check C / C++ code style
+[2.378s] -- Configured uncrustify additional arguments: 
+[2.380s] -- Added test 'xmllint' to check XML markup files
+[2.388s] -- Configuring done
+[2.416s] -- Generating done
+[2.424s] -- Build files have been written to: /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller
+[2.446s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller' returned '0': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_controller -DCMAKE_INSTALL_PREFIX=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller
+[2.450s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller -- -j16 -l16
+[2.549s] [ 33%] [32mBuilding CXX object CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_system_hardware.cpp.o[0m
+[2.549s] [ 66%] [32mBuilding CXX object CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_fake_system_hardware.cpp.o[0m
+[12.978s] [100%] [32m[1mLinking CXX shared library libuf_robot_hardware.so[0m
+[14.707s] [100%] Built target uf_robot_hardware
+[14.724s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller' returned '0': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller -- -j16 -l16
+[14.726s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller
+[14.737s] -- Install configuration: ""
+[14.738s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/uf_hardware_interface_plugins.xml
+[14.738s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/include
+[14.738s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/include/xarm_controller
+[14.738s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/include/xarm_controller/hardware
+[14.738s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/include/xarm_controller/hardware/uf_robot_system_hardware.h
+[14.738s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/include/xarm_controller/hardware/bak_uf_robot_fake_system_hardware.h
+[14.738s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/include/xarm_controller/hardware/uf_robot_fake_system_hardware.h
+[14.739s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/lib/libuf_robot_hardware.so
+[14.744s] -- Set runtime path of "/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/lib/libuf_robot_hardware.so" to ""
+[14.744s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch
+[14.745s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/xarm6_control_rviz_display.launch.py
+[14.745s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/_ros2_control.launch.py
+[14.745s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/_robot_ros2_control.launch.py
+[14.745s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/lib
+[14.746s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/lib/robot_controller_lib.py
+[14.746s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/xarm7_control_rviz_display.launch.py
+[14.746s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/lite6_control_rviz_display.launch.py
+[14.746s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/_dual_ros2_control.launch.py
+[14.747s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/xarm7_mirror_control_rviz_display.launch.py
+[14.747s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/xarm5_control_rviz_display.launch.py
+[14.747s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//launch/uf850_control_rviz_display.launch.py
+[14.747s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config
+[14.748s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/xarm7_mirror_gripper_controllers.yaml
+[14.748s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/bio_gripper_controllers.yaml
+[14.748s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/xarm7_mirror_controllers.yaml
+[14.748s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/xarm7_controllers.yaml
+[14.749s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/uf850_controllers.yaml
+[14.749s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/xarm6_controllers.yaml
+[14.749s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/xarm_gripper_controllers.yaml
+[14.749s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/lite6_controllers.yaml
+[14.750s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/xarm5_controllers.yaml
+[14.750s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller//config/uf850_gripper_controllers.yaml
+[14.750s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/environment/library_path.sh
+[14.750s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/environment/library_path.dsv
+[14.751s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/ament_index/resource_index/package_run_dependencies/xarm_controller
+[14.751s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/ament_index/resource_index/parent_prefix_path/xarm_controller
+[14.751s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/environment/ament_prefix_path.sh
+[14.751s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/environment/ament_prefix_path.dsv
+[14.752s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/environment/path.sh
+[14.752s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/environment/path.dsv
+[14.752s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/local_setup.bash
+[14.752s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/local_setup.sh
+[14.752s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/local_setup.zsh
+[14.753s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/local_setup.dsv
+[14.753s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/package.dsv
+[14.753s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/ament_index/resource_index/packages/xarm_controller
+[14.753s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/xarm_controller
+[14.754s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[14.754s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[14.754s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.754s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/cmake/xarm_controllerConfig.cmake
+[14.754s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/cmake/xarm_controllerConfig-version.cmake
+[14.755s] -- Installing: /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/share/xarm_controller/package.xml
+[14.758s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller' returned '0': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_controller

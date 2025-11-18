@@ -1,0 +1,10 @@
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/uninstall.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/xarm_sdk_uninstall.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/xarm_cxx_sdk.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/test.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/edit_cache.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/rebuild_cache.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/list_install_components.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/install.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/install/local.dir
+/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_sdk/CMakeFiles/install/strip.dir

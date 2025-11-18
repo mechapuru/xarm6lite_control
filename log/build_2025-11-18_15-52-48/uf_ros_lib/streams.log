@@ -1,0 +1,61 @@
+[1.305s] Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/uf_ros_lib': PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uf_ros_lib build --build-base /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build install --record /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/install.log --single-version-externally-managed install_data
+[1.763s] running egg_info
+[1.763s] creating ../build/uf_ros_lib/uf_ros_lib.egg-info
+[1.792s] writing ../build/uf_ros_lib/uf_ros_lib.egg-info/PKG-INFO
+[1.792s] writing dependency_links to ../build/uf_ros_lib/uf_ros_lib.egg-info/dependency_links.txt
+[1.793s] writing requirements to ../build/uf_ros_lib/uf_ros_lib.egg-info/requires.txt
+[1.793s] writing top-level names to ../build/uf_ros_lib/uf_ros_lib.egg-info/top_level.txt
+[1.793s] writing manifest file '../build/uf_ros_lib/uf_ros_lib.egg-info/SOURCES.txt'
+[1.856s] reading manifest file '../build/uf_ros_lib/uf_ros_lib.egg-info/SOURCES.txt'
+[1.861s] writing manifest file '../build/uf_ros_lib/uf_ros_lib.egg-info/SOURCES.txt'
+[1.862s] running build
+[1.862s] running build_py
+[1.862s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build
+[1.862s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib
+[1.862s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib
+[1.862s] copying uf_ros_lib/uf_robot_utils.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib
+[1.865s] copying uf_ros_lib/parameter_descriptions.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib
+[1.867s] copying uf_ros_lib/moveit_configs_builder.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib
+[1.867s] copying uf_ros_lib/__init__.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib
+[1.868s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[1.868s] copying uf_ros_lib/substitutions/common.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[1.868s] copying uf_ros_lib/substitutions/kinematics.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[1.868s] copying uf_ros_lib/substitutions/controllers.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[1.869s] copying uf_ros_lib/substitutions/planning_pipelines.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[1.869s] copying uf_ros_lib/substitutions/__init__.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[1.869s] copying uf_ros_lib/substitutions/joint_limits.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[1.874s] running install
+[1.885s] running install_lib
+[1.913s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib
+[1.914s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/uf_robot_utils.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib
+[1.915s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/parameter_descriptions.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib
+[1.915s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions
+[1.918s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/common.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions
+[1.918s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/kinematics.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions
+[1.918s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/controllers.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions
+[1.919s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/planning_pipelines.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions
+[1.919s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/__init__.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions
+[1.919s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/joint_limits.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions
+[1.919s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/moveit_configs_builder.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib
+[1.919s] copying /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build/lib/uf_ros_lib/__init__.py -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib
+[1.924s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/uf_robot_utils.py to uf_robot_utils.cpython-310.pyc
+[1.925s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/parameter_descriptions.py to parameter_descriptions.cpython-310.pyc
+[1.929s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions/common.py to common.cpython-310.pyc
+[1.930s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions/kinematics.py to kinematics.cpython-310.pyc
+[1.930s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions/controllers.py to controllers.cpython-310.pyc
+[1.933s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions/planning_pipelines.py to planning_pipelines.cpython-310.pyc
+[1.936s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions/__init__.py to __init__.cpython-310.pyc
+[1.937s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/substitutions/joint_limits.py to joint_limits.cpython-310.pyc
+[1.939s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/moveit_configs_builder.py to moveit_configs_builder.cpython-310.pyc
+[1.962s] byte-compiling /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib/__init__.py to __init__.cpython-310.pyc
+[1.963s] running install_data
+[1.964s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/share/ament_index
+[1.964s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/share/ament_index/resource_index
+[1.965s] creating /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/share/ament_index/resource_index/packages
+[1.965s] copying resource/uf_ros_lib -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/share/ament_index/resource_index/packages
+[1.966s] copying package.xml -> /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/share/uf_ros_lib
+[1.968s] running install_egg_info
+[1.996s] Copying ../build/uf_ros_lib/uf_ros_lib.egg-info to /home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages/uf_ros_lib-0.0.0-py3.10.egg-info
+[1.998s] running install_scripts
+[2.337s] writing list of installed files to '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/install.log'
+[2.434s] Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/uf_ros_lib' returned '0': PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/uf_ros_lib build --build-base /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/build install --record /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/uf_ros_lib/install.log --single-version-externally-managed install_data

@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-5a066e839cfb2b0755b7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "realsense_gazebo_plugin",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "realsense_gazebo_plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-realsense_gazebo_plugin-ed385bcd2c3be1c140bb.json",
+					"name" : "realsense_gazebo_plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "realsense_gazebo_plugin_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-realsense_gazebo_plugin_uninstall-7be43b568ce0142048b4.json",
+					"name" : "realsense_gazebo_plugin_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-670979ecef45bda8b52a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/realsense_gazebo_plugin",
+		"source" : "/home/paddy/rrc/xarm_ws/src/xarm_ros2/thirdparty/realsense_gazebo_plugin"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

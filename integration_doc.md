@@ -67,7 +67,12 @@ Update the implementation of `moveWithVelocity` to write the position value it r
 
 ### File 3: `xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h`
 
-Add two new publisher member variables to the `JoyToServoPub` class definition.
+Add the necessary include for `std_msgs::msg::Int32` and two new publisher member variables to the `JoyToServoPub` class definition.
+
+**Add this line to the includes section:**
+```cpp
+#include "std_msgs/msg/int32.hpp"
+```
 
 **Add these lines inside the `private:` section:**
 ```cpp
@@ -90,11 +95,11 @@ Here, we will initialize the new publishers and use them in the joystick callbac
 **2. In the `_joy_callback` function, modify the gripper control logic:**
 ```cpp
 // ... inside _joy_callback ...
-    // This is the new logic
+    // This is the new logic for gripper control and publishing
     int32_t gripper_cmd_velocity = 0;
     int32_t gripper_current_pos = 0;
-    auto gripper_cmd_msg = std_msgs::msg::Int32();
-    auto gripper_state_msg = std_msgs::msg::Int32();
+    auto gripper_cmd_msg = std::make_unique<std_msgs::msg::Int32>();
+    auto gripper_state_msg = std::make_unique<std_msgs::msg::Int32>();
 
     if (joystick_type_ == JOYSTICK_XBOX360_WIRED || joystick_type_ == JOYSTICK_XBOX360_WIRELESS)
     {
@@ -109,10 +114,10 @@ Here, we will initialize the new publishers and use them in the joystick callbac
     gripper_controller_->moveWithVelocity(gripper_cmd_velocity, gripper_current_pos);
 
     // Publish both command and state
-    gripper_cmd_msg.data = gripper_cmd_velocity;
-    gripper_state_msg.data = gripper_current_pos;
-    gripper_command_pub_->publish(gripper_cmd_msg);
-    gripper_state_pub_->publish(gripper_state_msg);
+    gripper_cmd_msg->data = gripper_cmd_velocity;
+    gripper_state_msg->data = gripper_current_pos;
+    gripper_command_pub_->publish(std::move(gripper_cmd_msg));
+    gripper_state_pub_->publish(std::move(gripper_state_msg));
 
 
     // Create the messages we might publish for the arm

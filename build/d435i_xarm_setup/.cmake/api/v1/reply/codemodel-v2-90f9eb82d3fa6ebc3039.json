@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-73b407144366b19c7faa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "d435i_xarm_setup",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "d435i_xarm_setup_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-d435i_xarm_setup_uninstall-099f0be9f538ae1d6a3c.json",
+					"name" : "d435i_xarm_setup_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "findobj_grasp_moveit_planner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-findobj_grasp_moveit_planner-b53851a2d412d25e4e6b.json",
+					"name" : "findobj_grasp_moveit_planner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "findobj_grasp_xarm_api::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-findobj_grasp_xarm_api-9c34d9c0b263b18b7bde.json",
+					"name" : "findobj_grasp_xarm_api",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tf_object_to_base::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tf_object_to_base-16076620e4f2bb659249.json",
+					"name" : "tf_object_to_base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-3ebe5c2d999446a07536.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/d435i_xarm_setup",
+		"source" : "/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_vision/d435i_xarm_setup"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
