@@ -158,7 +158,28 @@ ros2 param describe /camera/camera rgb_camera.color_profile
 ros2 launch realsense2_camera rs_launch.py rgb_camera.color_profile:="1280,720,30"
 ```
 
-### 3.3 Start Recording
+### 3.3 Address DDS Buffer Overflows (if needed)
+
+If you encounter `sequence size exceeds remaining buffer` errors, it indicates that the ROS 2 DDS middleware is struggling with the volume or frequency of messages. A common solution is to reduce the highest frequency data streams.
+
+You found that reducing the `update_rate` of the `joint_trajectory_controller` in `lite6_controllers.yaml` from 250 Hz to **200 Hz** resolved this issue.
+
+**Locate this section in `xarm_controller/config/lite6_controllers.yaml`:**
+```yaml
+controller_manager:
+  ros__parameters:
+    update_rate: 250  # Hz
+```
+
+**Change it to:**
+```yaml
+controller_manager:
+  ros__parameters:
+    update_rate: 200  # Hz
+```
+This reduces the frequency at which the robot's state is read and published, alleviating pressure on the DDS buffers.
+
+### 3.4 Start Recording
 
 1.  Run the launch files for the robot and camera.
 2.  In a new terminal, run the `ros2 bag record` command. Note that `/gripper/state` will now contain the normalized `0.0-1.0` value.

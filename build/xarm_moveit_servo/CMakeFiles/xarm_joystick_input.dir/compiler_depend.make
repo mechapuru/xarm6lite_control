@@ -1019,6 +1019,11 @@ CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o: /home/paddy/rr
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__type_support.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp \
   /opt/ros/humble/include/rclcpp_components/rclcpp_components/register_node_macro.hpp \
   /opt/ros/humble/include/class_loader/class_loader/class_loader.hpp \
   /usr/include/c++/11/cstddef \
@@ -1045,6 +1050,10 @@ CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o: /home/paddy/rr
 /opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp:
 
 /usr/include/c++/11/cstddef:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -1159,6 +1168,8 @@ CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o: /home/paddy/rr
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/dynamic_storage.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_event_handler.hpp:
 
@@ -1571,6 +1582,8 @@ CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o: /home/paddy/rr
 /opt/ros/humble/include/rclcpp/rclcpp/context.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__struct.hpp:
 
@@ -2405,6 +2418,8 @@ CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o: /home/paddy/rr
 /opt/ros/humble/include/rcl/rcl/event_callback.h:
 
 /opt/ros/humble/include/tracetools/tracetools/tracetools.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp:
 

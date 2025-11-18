@@ -1021,6 +1021,11 @@ CMakeFiles/xarm_joystick_input.dir/src/xarm_joystick_input.cpp.o
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__type_support.hpp
  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp
  /opt/ros/humble/include/rclcpp_components/rclcpp_components/register_node_macro.hpp
  /opt/ros/humble/include/class_loader/class_loader/class_loader.hpp
  /usr/include/c++/11/cstddef
