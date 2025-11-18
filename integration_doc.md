@@ -6,18 +6,20 @@ This document outlines the plan to collect high-quality, synchronized data for t
 
 The goal is to record the following data streams into a single ROS bag file for offline analysis and processing:
 - **Robot Arm**: Commanded and current state (joint positions, velocities).
-- **Gripper**: Commanded velocity and current position.
+- **Gripper**: Commanded velocity and current **normalized** position (0.0 for open, 1.0 for closed).
 - **Camera**: Color and depth image streams.
 
-## 2. The Challenge: Missing Gripper Topics
+## 2. The Challenge: Missing Gripper Topics & Raw Data
 
-While the robot and camera data are already available as ROS topics, the gripper commands and its current state are handled internally within the `xarm_joystick_input` node and are not published. To record this data, we must first modify the code to expose it on new ROS topics.
+While the robot and camera data are already available as ROS topics, the gripper commands and its current state are handled internally and are not published. Additionally, the raw position data from the gripper is in abstract hardware units. To solve this, we will:
+1.  Expose the gripper command and state on new ROS topics.
+2.  Normalize the raw position data to an intuitive `0.0` to `1.0` range.
 
 ## 3. Strategy
 
 The process is broken down into three steps:
 
-1.  **Code Modification**: Modify the `xarm_moveit_servo` package to create two new topics: `/gripper/command` and `/gripper/state`.
+1.  **Code Modification**: Modify the `xarm_moveit_servo` package to create and update the gripper topics.
 2.  **Build & Run**: Rebuild the workspace and run the system as usual.
 3.  **Record Data**: Use the `ros2 bag record` command to capture all the necessary topics simultaneously.
 
@@ -25,81 +27,66 @@ The process is broken down into three steps:
 
 ## Step 1: Code Modifications
 
-We will make small changes to three files to publish the gripper data.
+We will make small changes to the relevant files to publish the normalized gripper data.
 
 ### File 1: `xarm_moveit_servo/include/xarm_moveit_servo/gripper_controller.h`
 
-Modify the `moveWithVelocity` function declaration to allow it to return the current position of the servo.
+First, we expose the hardware limits by making `POS_MIN` and `POS_MAX` public constants. This allows other nodes to use them for normalization.
 
 **Change this:**
 ```cpp
-bool moveWithVelocity(int velocity_raw);
+private: 
+    // ...
+    // Position Limits
+    const int32_t POS_MIN = 2600;
+    const int32_t POS_MAX = 3700;
 ```
 
 **To this:**
 ```cpp
-bool moveWithVelocity(int velocity_raw, int32_t& current_position);
+public: 
+    // ...
+    // Position Limits
+    static const int32_t POS_MIN = 2600;
+    static const int32_t POS_MAX = 3700;
 ```
 
-### File 2: `xarm_moveit_servo/src/gripper_controller.cpp`
+### File 2: `xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h`
 
-Update the implementation of `moveWithVelocity` to write the position value it reads into the new reference parameter.
+Next, we update the `gripper_state_pub_` to use the `Float64` message type for our normalized value and include the required header.
 
-**Change this section:**
+**Change this:**
 ```cpp
-// ... inside moveWithVelocity ...
-    // Read present position
-    int32_t present_position = 0;
-    dxl_comm_result = packetHandler_->read4ByteTxRx(portHandler_, dxl_id_, ADDR_PRESENT_POSITION, (uint32_t*)&present_position, &dxl_error);
-    if (dxl_comm_result != COMM_SUCCESS || dxl_error != 0) {
-// ...
-```
-
-**To this:**
-```cpp
-// ... inside moveWithVelocity ...
-    // Read present position
-    dxl_comm_result = packetHandler_->read4ByteTxRx(portHandler_, dxl_id_, ADDR_PRESENT_POSITION, (uint32_t*)&current_position, &dxl_error);
-    if (dxl_comm_result != COMM_SUCCESS || dxl_error != 0) {
-// ...
-```
-*(Note: We are changing `present_position` to `current_position` and removing the local variable declaration to use the one passed by reference).*
-
-### File 3: `xarm_moveit_servo/include/xarm_moveit_servo/xarm_joystick_input.h`
-
-Add the necessary include for `std_msgs::msg::Int32` and two new publisher member variables to the `JoyToServoPub` class definition.
-
-**Add this line to the includes section:**
-```cpp
-#include "std_msgs/msg/int32.hpp"
-```
-
-**Add these lines inside the `private:` section:**
-```cpp
-    // ... other private members
-    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr gripper_command_pub_;
     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr gripper_state_pub_;
 ```
 
-### File 4: `xarm_moveit_servo/src/xarm_joystick_input.cpp`
-
-Here, we will initialize the new publishers and use them in the joystick callback.
-
-**1. In the `JoyToServoPub` constructor, add the publisher initializations:**
+**To this (and ensure the header is included):**
 ```cpp
-// ... after other initializations in the constructor ...
-    gripper_command_pub_ = this->create_publisher<std_msgs::msg::Int32>("/gripper/command", ros_queue_size_);
-    gripper_state_pub_ = this->create_publisher<std_msgs::msg::Int32>("/gripper/state", ros_queue_size_);
+#include "std_msgs/msg/float64.hpp"
+//...
+    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr gripper_state_pub_;
 ```
 
-**2. In the `_joy_callback` function, modify the gripper control logic:**
+### File 3: `xarm_moveit_servo/src/xarm_joystick_input.cpp`
+
+Finally, we implement the normalization logic.
+
+**1. In the `JoyToServoPub` constructor, update the publisher creation:**
+```cpp
+// Change this line
+    gripper_state_pub_ = this->create_publisher<std_msgs::msg::Int32>("/gripper/state", ros_queue_size_);
+// To this
+    gripper_state_pub_ = this->create_publisher<std_msgs::msg::Float64>("/gripper/state", ros_queue_size_);
+```
+
+**2. In the `_joy_callback` function, update the gripper logic to calculate and publish the normalized position:**
 ```cpp
 // ... inside _joy_callback ...
     // This is the new logic for gripper control and publishing
     int32_t gripper_cmd_velocity = 0;
     int32_t gripper_current_pos = 0;
     auto gripper_cmd_msg = std::make_unique<std_msgs::msg::Int32>();
-    auto gripper_state_msg = std::make_unique<std_msgs::msg::Int32>();
+    auto gripper_state_msg = std::make_unique<std_msgs::msg::Float64>(); // Use Float64
 
     if (joystick_type_ == JOYSTICK_XBOX360_WIRED || joystick_type_ == JOYSTICK_XBOX360_WIRELESS)
     {
@@ -113,18 +100,20 @@ Here, we will initialize the new publishers and use them in the joystick callbac
     // Send command and get state
     gripper_controller_->moveWithVelocity(gripper_cmd_velocity, gripper_current_pos);
 
+    // --- NORMALIZATION LOGIC ---
+    // Normalize the raw position to a 0.0-1.0 range
+    double normalized_pos = (double)(gripper_current_pos - GripperController::POS_MIN) / (double)(GripperController::POS_MAX - GripperController::POS_MIN);
+    // Clamp the value between 0.0 and 1.0 to ensure it's always in range
+    normalized_pos = std::max(0.0, std::min(1.0, normalized_pos));
+
     // Publish both command and state
     gripper_cmd_msg->data = gripper_cmd_velocity;
-    gripper_state_msg->data = gripper_current_pos;
+    gripper_state_msg->data = normalized_pos; // Publish normalized value
     gripper_command_pub_->publish(std::move(gripper_cmd_msg));
     gripper_state_pub_->publish(std::move(gripper_state_msg));
 
-
-    // Create the messages we might publish for the arm
-    auto twist_msg = std::make_unique<geometry_msgs::msg::TwistStamped>();
-// ... rest of the function
+    // ... rest of the function
 ```
-*(Note: This replaces the original `if/else if/else` block for the gripper with a more explicit version that also publishes the data.)*
 
 ---
 
@@ -141,46 +130,38 @@ source install/setup.bash
 
 ## Step 3: Record the Data
 
-### 3.1 Configure Camera Frequency (Optional)
+### 3.1 Configure Joystick/Gripper Frequency
 
-The RealSense camera can be launched with different frame rates. The quality and size of your dataset will depend on these settings. Before recording, you can decide on and configure your desired camera profile.
+To ensure a high and consistent data rate, set the `autorepeat_rate` for the `joy_node` in `_robot_moveit_servo_realmove.launch.py` to your desired frequency (e.g., 30.0 for 30 Hz).
 
-First, ensure the camera node is running (`ros2 launch realsense2_camera rs_launch.py`). Then, in a new terminal, find the exact node name:
-
-```bash
-ros2 node list
-# It will likely be /camera/camera
+```python
+# In _robot_moveit_servo_realmove.launch.py
+            ComposableNode(
+                package='joy',
+                plugin='joy::Joy',
+                name='joy_node',
+                parameters=[
+                    {'autorepeat_rate': 30.0},
+                ],
+            ),
 ```
 
-Use the node name to check the available profiles for the color and depth streams:
+### 3.2 Configure Camera Frequency (Optional)
+
+You can check available camera profiles and set them at launch time.
 
 ```bash
-# Check available color profiles
+# Check available profiles (while camera node is running)
 ros2 param describe /camera/camera rgb_camera.color_profile
 
-# Check available depth profiles
-ros2 param describe /camera/camera depth_module.depth_profile
+# Launch camera with a specific profile
+ros2 launch realsense2_camera rs_launch.py rgb_camera.color_profile:="1280,720,30"
 ```
 
-To launch the camera with a specific profile (e.g., 30 FPS), you would run:
+### 3.3 Start Recording
 
-```bash
-ros2 launch realsense2_camera rs_launch.py rgb_camera.color_profile:="1280,720,30" depth_module.depth_profile:="1280,720,30"
-```
-**Note:** The camera is launched as a separate process from the xArm control launch file.
-
-### 3.2 Start Recording
-
-1.  Run the main launch file for the robot arm (and the camera launch file, if not already running).
-    ```bash
-    # Terminal 1: Launch the robot
-    ros2 launch xarm_moveit_servo lite6_moveit_servo_realmove.launch.py robot_ip:=<your_ip> joystick_type:=1 gripper_port:=/dev/ttyUSB0
-    
-    # Terminal 2: Launch the camera (if not already running)
-    ros2 launch realsense2_camera rs_launch.py
-    ```
-
-2.  In a **new terminal** (after sourcing the workspace), run the following command to start recording. This will save all the specified topics into a bag file named `sync_data_bag`.
+1.  Run the launch files for the robot and camera.
+2.  In a new terminal, run the `ros2 bag record` command. Note that `/gripper/state` will now contain the normalized `0.0-1.0` value.
 
     ```bash
     ros2 bag record -o sync_data_bag \
@@ -191,7 +172,4 @@ ros2 launch realsense2_camera rs_launch.py rgb_camera.color_profile:="1280,720,3
     /camera/camera/color/image_raw \
     /camera/camera/depth/image_rect_raw
     ```
-
-3.  Move the robot and gripper with the joystick to collect your data. Press `Ctrl+C` in the bag record terminal to stop recording.
-
-You will now have a rosbag file in the `sync_data_bag` directory containing all the necessary, timestamped data streams for your analysis.
+3.  Collect your data, then stop the recording with `Ctrl+C`.

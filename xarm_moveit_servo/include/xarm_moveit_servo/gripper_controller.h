@@ -22,6 +22,10 @@ public:
     ~GripperController();
     bool moveWithVelocity(int velocity_raw, int32_t& current_position);
 
+    // Position Limits
+    static const int32_t POS_MIN = 2600;
+    static const int32_t POS_MAX = 3700;
+
 private:
     // Dynamixel SDK handlers
     dynamixel::PortHandler* portHandler_;
@@ -37,10 +41,6 @@ private:
     const uint16_t ADDR_OPERATING_MODE = 11;
     const uint16_t ADDR_GOAL_VELOCITY = 104;
     const uint16_t ADDR_PRESENT_POSITION = 132;
-
-    // Position Limits
-    const int32_t POS_MIN = 2600;
-    const int32_t POS_MAX = 3700;
 
     // Thread safety
     std::mutex mutex_;

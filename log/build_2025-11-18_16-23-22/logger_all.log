@@ -1,0 +1,407 @@
+[0.097s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'xarm_moveit_servo']
+[0.097s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['xarm_moveit_servo'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x738dd558c700>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x738dd558c130>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x738dd558c130>>, mixin_verb=('build',))
+[0.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.127s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/paddy/rrc/xarm_ws/src/xarm_ros2'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extension 'ros'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extensions ['cmake', 'python']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extension 'cmake'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extension 'python'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extensions ['python_setup_py']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo) by extension 'python_setup_py'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(demo/mbot_demo) by extension 'ros'
+[0.143s] DEBUG:colcon.colcon_core.package_identification:Package 'demo/mbot_demo' with type 'ros.ament_cmake' and name 'mbot_demo'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ignore_ament_install'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['colcon_pkg']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'colcon_pkg'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['colcon_meta']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'colcon_meta'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['ros']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ros'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['cmake', 'python']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'cmake'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'python'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['python_setup_py']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'python_setup_py'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ignore_ament_install'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['colcon_pkg']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'colcon_pkg'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ros'
+[0.149s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_camera' with type 'ros.ament_cmake' and name 'realsense2_camera'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ros'
+[0.150s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_camera_msgs' with type 'ros.ament_cmake' and name 'realsense2_camera_msgs'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ignore_ament_install'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['colcon_pkg']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'colcon_pkg'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['colcon_meta']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'colcon_meta'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['ros']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_description' with type 'ros.ament_cmake' and name 'realsense2_description'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_rgbd_plugin) by extension 'ros'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_rgbd_plugin' with type 'ros.ament_cmake' and name 'realsense2_rviz_plugin'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ros'
+[0.153s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_ros_mqtt_bridge' with type 'ros.ament_python' and name 'realsense2_ros_mqtt_bridge'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extension 'ros'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extensions ['cmake', 'python']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extension 'python'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extensions ['python_setup_py']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/res) by extension 'python_setup_py'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'python_setup_py'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty) by extension 'python_setup_py'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(thirdparty/realsense_gazebo_plugin) by extension 'ros'
+[0.155s] DEBUG:colcon.colcon_core.package_identification:Package 'thirdparty/realsense_gazebo_plugin' with type 'ros.ament_cmake' and name 'realsense_gazebo_plugin'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(uf_ros_lib) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'uf_ros_lib' with type 'ros.ament_python' and name 'uf_ros_lib'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_api) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_api' with type 'ros.ament_cmake' and name 'xarm_api'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_controller) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_controller' with type 'ros.ament_cmake' and name 'xarm_controller'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_description) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_description' with type 'ros.ament_cmake' and name 'xarm_description'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_gazebo) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_gazebo' with type 'ros.ament_cmake' and name 'xarm_gazebo'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_config) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_moveit_config' with type 'ros.ament_cmake' and name 'xarm_moveit_config'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extensions ['colcon_meta']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extension 'colcon_meta'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_moveit_servo) by extension 'ros'
+[0.164s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_moveit_servo' with type 'ros.ament_cmake' and name 'xarm_moveit_servo'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_msgs) by extension 'ros'
+[0.165s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_msgs' with type 'ros.ament_cmake' and name 'xarm_msgs'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extension 'colcon_pkg'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extensions ['colcon_meta']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_planner) by extension 'ros'
+[0.166s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_planner' with type 'ros.ament_cmake' and name 'xarm_planner'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_sdk) by extension 'ros'
+[0.166s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_sdk' with type 'ros.ament_cmake' and name 'xarm_sdk'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extension 'ros'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extensions ['python_setup_py']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision) by extension 'python_setup_py'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(xarm_vision/d435i_xarm_setup) by extension 'ros'
+[0.168s] DEBUG:colcon.colcon_core.package_identification:Package 'xarm_vision/d435i_xarm_setup' with type 'ros.ament_cmake' and name 'd435i_xarm_setup'
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'mbot_demo' in 'demo/mbot_demo'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_camera_msgs' in 'realsense-ros/realsense2_camera_msgs'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_ros_mqtt_bridge' in 'realsense-ros/realsense2_ros_mqtt_bridge'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense_gazebo_plugin' in 'thirdparty/realsense_gazebo_plugin'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'uf_ros_lib' in 'uf_ros_lib'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'xarm_description' in 'xarm_description'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'xarm_msgs' in 'xarm_msgs'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'xarm_sdk' in 'xarm_sdk'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_camera' in 'realsense-ros/realsense2_camera'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_description' in 'realsense-ros/realsense2_description'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_rviz_plugin' in 'realsense-ros/realsense2_rgbd_plugin'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'xarm_api' in 'xarm_api'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'd435i_xarm_setup' in 'xarm_vision/d435i_xarm_setup'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'xarm_controller' in 'xarm_controller'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'xarm_gazebo' in 'xarm_gazebo'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'xarm_moveit_config' in 'xarm_moveit_config'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'xarm_planner' in 'xarm_planner'
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.193s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 18 installed packages in /home/paddy/rrc/xarm_ws/src/xarm_ros2/install
+[0.194s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 20 installed packages in /home/paddy/rrc/xarm_ws/install
+[0.196s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 368 installed packages in /opt/ros/humble
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'cmake_target' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'xarm_moveit_servo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'xarm_moveit_servo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo', 'merge_install': False, 'path': '/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo', 'symlink_install': False, 'test_result_base': None}
+[0.245s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.246s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.246s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo' with build type 'ament_cmake'
+[0.246s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo'
+[0.248s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.248s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.248s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.287s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/install/mbot_demo CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/install/librealsense2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/paddy/rrc/xarm_ws/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/lib PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo -- -j16 -l16
+[0.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo' returned '0': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/install/mbot_demo CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/install/librealsense2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/paddy/rrc/xarm_ws/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/lib PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo -- -j16 -l16
+[0.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/install/mbot_demo CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/install/librealsense2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/paddy/rrc/xarm_ws/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/lib PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo
+[0.416s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_moveit_servo)
+[0.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo' returned '0': AMENT_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/install/mbot_demo CMAKE_PREFIX_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_description:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/xarm_sdk:/home/paddy/rrc/xarm_ws/install/xarm_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera:/home/paddy/rrc/xarm_ws/install/mbot_demo:/home/paddy/rrc/xarm_ws/install/librealsense2:/home/paddy/rrc/xarm_ws/install/xarm_planner:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo:/home/paddy/rrc/xarm_ws/install/xarm_moveit_config:/home/paddy/rrc/xarm_ws/install/xarm_gazebo:/home/paddy/rrc/xarm_ws/install/xarm_controller:/home/paddy/rrc/xarm_ws/install/d435i_xarm_setup:/home/paddy/rrc/xarm_ws/install/xarm_api:/home/paddy/rrc/xarm_ws/install/xarm_msgs:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_rviz_plugin:/home/paddy/rrc/xarm_ws/install/realsense2_description:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge:/opt/ros/humble:/home/paddy/rrc/xarm_ws/install/uf_ros_lib:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge LD_LIBRARY_PATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera/lib:/home/paddy/rrc/xarm_ws/install/librealsense2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/paddy/rrc/xarm_ws/install/xarm_planner/lib:/home/paddy/rrc/xarm_ws/install/xarm_moveit_servo/lib:/home/paddy/rrc/xarm_ws/install/xarm_gazebo/lib:/home/paddy/rrc/xarm_ws/install/xarm_controller/lib:/home/paddy/rrc/xarm_ws/install/xarm_api/lib:/home/paddy/rrc/xarm_ws/install/xarm_sdk/lib:/home/paddy/rrc/xarm_ws/install/xarm_msgs/lib:/home/paddy/rrc/xarm_ws/install/realsense_gazebo_plugin/lib:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/lib PYTHONPATH=/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/xarm_msgs/local/lib/python3.10/dist-packages:/home/paddy/rrc/xarm_ws/install/uf_ros_lib/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:/home/paddy/rrc/xarm_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/paddy/rrc/xarm_ws/src/xarm_ros2/build/xarm_moveit_servo
+[0.419s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo' for CMake module files
+[0.419s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo' for CMake config files
+[0.419s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_moveit_servo', 'cmake_prefix_path')
+[0.419s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/cmake_prefix_path.ps1'
+[0.420s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/cmake_prefix_path.dsv'
+[0.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/cmake_prefix_path.sh'
+[0.421s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib'
+[0.422s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_moveit_servo', 'ld_library_path_lib')
+[0.422s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/ld_library_path_lib.ps1'
+[0.422s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/ld_library_path_lib.dsv'
+[0.422s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/ld_library_path_lib.sh'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/bin'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/pkgconfig/xarm_moveit_servo.pc'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/python3.10/site-packages'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/bin'
+[0.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.ps1'
+[0.424s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.dsv'
+[0.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.sh'
+[0.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.bash'
+[0.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.zsh'
+[0.426s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/colcon-core/packages/xarm_moveit_servo)
+[0.427s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_moveit_servo)
+[0.427s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo' for CMake module files
+[0.427s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo' for CMake config files
+[0.428s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_moveit_servo', 'cmake_prefix_path')
+[0.428s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/cmake_prefix_path.ps1'
+[0.428s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/cmake_prefix_path.dsv'
+[0.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/cmake_prefix_path.sh'
+[0.429s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib'
+[0.429s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_moveit_servo', 'ld_library_path_lib')
+[0.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/ld_library_path_lib.ps1'
+[0.430s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/ld_library_path_lib.dsv'
+[0.430s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/hook/ld_library_path_lib.sh'
+[0.430s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/bin'
+[0.430s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/pkgconfig/xarm_moveit_servo.pc'
+[0.431s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/lib/python3.10/site-packages'
+[0.431s] Level 1:colcon.colcon_core.environment:checking '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/bin'
+[0.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.ps1'
+[0.432s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.dsv'
+[0.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.sh'
+[0.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.bash'
+[0.433s] INFO:colcon.colcon_core.shell:Creating package script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/xarm_moveit_servo/package.zsh'
+[0.433s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/xarm_moveit_servo/share/colcon-core/packages/xarm_moveit_servo)
+[0.433s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.434s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.434s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.434s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.439s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.439s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.439s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.452s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.453s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/local_setup.ps1'
+[0.455s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/_local_setup_util_ps1.py'
+[0.457s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/setup.ps1'
+[0.459s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/local_setup.sh'
+[0.460s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/_local_setup_util_sh.py'
+[0.461s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/setup.sh'
+[0.464s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/local_setup.bash'
+[0.464s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/setup.bash'
+[0.467s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/local_setup.zsh'
+[0.467s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/paddy/rrc/xarm_ws/src/xarm_ros2/install/setup.zsh'

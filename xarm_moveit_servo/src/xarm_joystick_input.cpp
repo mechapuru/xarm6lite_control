@@ -7,6 +7,7 @@
 
 #include "xarm_moveit_servo/xarm_joystick_input.h"
 #include <std_msgs/msg/int32.hpp> // Include for std_msgs::msg::Int32
+#include <algorithm> // Include for std::max and std::min
 
 
 namespace xarm_moveit_servo
@@ -110,7 +111,7 @@ JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions& options)
 
     // Initialize Gripper Publishers
     gripper_command_pub_ = this->create_publisher<std_msgs::msg::Int32>("/gripper/command", ros_queue_size_);
-    gripper_state_pub_ = this->create_publisher<std_msgs::msg::Int32>("/gripper/state", ros_queue_size_);
+    gripper_state_pub_ = this->create_publisher<std_msgs::msg::Float64>("/gripper/state", ros_queue_size_);
 
     if (cartesian_command_in_topic_.rfind("~/", 0) == 0) {
         cartesian_command_in_topic_ = "/servo_server/" + cartesian_command_in_topic_.substr(2, cartesian_command_in_topic_.length());
@@ -281,7 +282,7 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     int32_t gripper_cmd_velocity = 0;
     int32_t gripper_current_pos = 0;
     auto gripper_cmd_msg = std::make_unique<std_msgs::msg::Int32>();
-    auto gripper_state_msg = std::make_unique<std_msgs::msg::Int32>();
+    auto gripper_state_msg = std::make_unique<std_msgs::msg::Float64>();
 
     if (joystick_type_ == JOYSTICK_XBOX360_WIRED || joystick_type_ == JOYSTICK_XBOX360_WIRELESS)
     {
@@ -295,9 +296,14 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     // Send command and get state
     gripper_controller_->moveWithVelocity(gripper_cmd_velocity, gripper_current_pos);
 
+    // Normalize the raw position
+    double normalized_pos = (double)(gripper_current_pos - GripperController::POS_MIN) / (double)(GripperController::POS_MAX - GripperController::POS_MIN);
+    // Clamp the value between 0.0 and 1.0 to be safe
+    normalized_pos = std::max(0.0, std::min(1.0, normalized_pos));
+
     // Publish both command and state
     gripper_cmd_msg->data = gripper_cmd_velocity;
-    gripper_state_msg->data = gripper_current_pos;
+    gripper_state_msg->data = normalized_pos;
     gripper_command_pub_->publish(std::move(gripper_cmd_msg));
     gripper_state_pub_->publish(std::move(gripper_state_msg));
 
