@@ -252,7 +252,7 @@ def launch_setup(context, *args, **kwargs):
                 plugin='joy::Joy',
                 name='joy_node',
                 parameters=[
-                    # {'autorepeat_rate': 50.0},
+                    {'autorepeat_rate': 30.0},
                 ],
                 # extra_arguments=[{'use_intra_process_comms': True}],
             ),
