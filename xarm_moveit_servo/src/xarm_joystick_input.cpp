@@ -11,6 +11,10 @@
 namespace xarm_moveit_servo
 {
 
+// Gripper velocity commands
+const int GRIPPER_OPEN_VELOCITY = 30;
+const int GRIPPER_CLOSE_VELOCITY = -30;
+
 enum JOYSTICK_TYPE
 {
     JOYSTICK_XBOX360_WIRED = 1,
@@ -93,6 +97,15 @@ JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions& options)
     _declare_or_get_param<std::string>(robot_link_command_frame_, "moveit_servo.robot_link_command_frame", robot_link_command_frame_);
     _declare_or_get_param<std::string>(ee_frame_name_, "moveit_servo.ee_frame_name", ee_frame_name_);
     _declare_or_get_param<std::string>(planning_frame_, "moveit_servo.planning_frame", planning_frame_);
+
+    // Gripper parameters
+    std::string gripper_port;
+    int gripper_baudrate;
+    _declare_or_get_param<std::string>(gripper_port, "gripper_port", "/dev/ttyUSB0");
+    _declare_or_get_param<int>(gripper_baudrate, "gripper_baudrate", 1000000);
+    
+    // Initialize Gripper Controller
+    gripper_controller_ = std::make_unique<GripperController>(gripper_port, gripper_baudrate);
 
     if (cartesian_command_in_topic_.rfind("~/", 0) == 0) {
         cartesian_command_in_topic_ = "/servo_server/" + cartesian_command_in_topic_.substr(2, cartesian_command_in_topic_.length());
@@ -194,9 +207,10 @@ bool JoyToServoPub::_convert_xbox360_joy_to_cmd(
         planning_frame_ = ee_frame_name_;
     }
     
-    if (buttons[XBOX360_BTN_A] || buttons[XBOX360_BTN_B] 
-        || buttons[XBOX360_BTN_X] || buttons[XBOX360_BTN_Y] 
-        || axes[cross_key_lr] || axes[cross_key_fb])
+    // Gripper control is handled in _joy_callback directly
+    // to allow simultaneous arm and gripper motion.
+    // We check for other buttons to decide arm motion.
+    if (axes[cross_key_lr] || axes[cross_key_fb])
     {
         // Map the D_PAD to the proximal joints
         joint->joint_names.push_back("joint1");
@@ -204,18 +218,18 @@ bool JoyToServoPub::_convert_xbox360_joy_to_cmd(
         joint->joint_names.push_back("joint2");
         joint->velocities.push_back(axes[cross_key_fb] * 1);
 
-        // Map the diamond to the distal joints
-        joint->joint_names.push_back("joint" + std::to_string(dof_));
-        joint->velocities.push_back((buttons[XBOX360_BTN_B] - buttons[XBOX360_BTN_X]) * 1);
-        joint->joint_names.push_back("joint" + std::to_string(dof_ - 1));
-        joint->velocities.push_back((buttons[XBOX360_BTN_Y] - buttons[XBOX360_BTN_A]) * 1);
+        // The following lines are commented out to prioritize gripper control
+        // joint->joint_names.push_back("joint" + std::to_string(dof_));
+        // joint->velocities.push_back((buttons[XBOX360_BTN_B] - buttons[XBOX360_BTN_X]) * 1);
+        // joint->joint_names.push_back("joint" + std::to_string(dof_ - 1));
+        // joint->velocities.push_back((buttons[XBOX360_BTN_Y] - buttons[XBOX360_BTN_A]) * 1);
         return false;
     }
 
     // The bread and butter: map buttons to twist commands
     twist->twist.linear.x = axes[left_stick_fb];
     twist->twist.linear.y = axes[left_stick_lr];
-    twist->twist.linear.z = -1 * (axes[left_trigger] - axes[right_trigger]);
+    twist->twist.linear.z = -0.5 * (axes[left_trigger] - axes[right_trigger]);
     twist->twist.angular.y = axes[right_stick_fb];
     twist->twist.angular.x = axes[right_stick_lr];
     twist->twist.angular.z = buttons[XBOX360_BTN_LB] - buttons[XBOX360_BTN_RB];
@@ -257,6 +271,17 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     // axes_str += "]";
     // RCLCPP_INFO(this->get_logger(), "axes_str: %s", axes_str.c_str());
     // return;
+
+    if (joystick_type_ == JOYSTICK_XBOX360_WIRED || joystick_type_ == JOYSTICK_XBOX360_WIRELESS)
+    {
+        if (msg->buttons[XBOX360_BTN_A]) {
+            gripper_controller_->moveWithVelocity(GRIPPER_OPEN_VELOCITY);
+        } else if (msg->buttons[XBOX360_BTN_B]) {
+            gripper_controller_->moveWithVelocity(GRIPPER_CLOSE_VELOCITY);
+        } else {
+            gripper_controller_->moveWithVelocity(0);
+        }
+    }
 
     // Create the messages we might publish
     auto twist_msg = std::make_unique<geometry_msgs::msg::TwistStamped>();

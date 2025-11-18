@@ -25,6 +25,8 @@ def generate_launch_description():
     add_vacuum_gripper = LaunchConfiguration('add_vacuum_gripper', default=False)
     baud_checkset = LaunchConfiguration('baud_checkset', default=True)
     default_gripper_baud = LaunchConfiguration('default_gripper_baud', default=2000000)
+    gripper_port = LaunchConfiguration('gripper_port', default='/dev/ttyUSB0')
+    gripper_baudrate = LaunchConfiguration('gripper_baudrate', default=57600)
 
     # robot moveit servo launch
     # xarm_moveit_servo/launch/_robot_moveit_servo.launch.py
@@ -45,6 +47,8 @@ def generate_launch_description():
             'add_vacuum_gripper': add_vacuum_gripper,
             'robot_type': 'lite',
             'ros2_control_plugin': 'uf_robot_hardware/UFRobotSystemHardware',
+            'gripper_port': gripper_port,
+            'gripper_baudrate': gripper_baudrate,
         }.items(),
     )
 

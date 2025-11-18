@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 project(xarm_moveit_servo)
 
+# Set the RPATH to ensure the linker can find the Dynamixel SDK at runtime
+set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib;/home/paddy/rrc/DynamixelSDK/install/dynamixel_sdk/lib")
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 99)
@@ -17,9 +21,6 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -30,14 +31,12 @@ find_package(moveit_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(moveit_ros_planning REQUIRED)
 
+# Manually specify Dynamixel SDK paths
+include_directories(/home/paddy/rrc/DynamixelSDK/c++/include)
+link_directories(/home/paddy/rrc/DynamixelSDK/install/dynamixel_sdk/lib)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # uncomment the line when a copyright and license is not present in all source files
-  #set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # uncomment the line when this package is not in a git repo
-  #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
 
@@ -58,8 +57,13 @@ include_directories(
   ${ament_INCLUDE_DIRS}
 )
 
-add_library(xarm_joystick_input SHARED src/xarm_joystick_input.cpp)
+add_library(xarm_joystick_input SHARED 
+  src/xarm_joystick_input.cpp
+  src/gripper_controller.cpp
+)
 ament_target_dependencies(xarm_joystick_input ${THIS_PACKAGE_INCLUDE_DEPENDS})
+# Link the dynamixel_sdk library directly by name
+target_link_libraries(xarm_joystick_input dynamixel_sdk)
 rclcpp_components_register_nodes(xarm_joystick_input "xarm_moveit_servo::JoyToServoPub")
 
 add_executable(xarm_keyboard_input

@@ -14,6 +14,7 @@
 #include <control_msgs/msg/joint_jog.hpp>
 #include <std_srvs/srv/trigger.hpp>
 #include <moveit_msgs/msg/planning_scene.hpp>
+#include "xarm_moveit_servo/gripper_controller.h"
 
 
 namespace xarm_moveit_servo
@@ -41,6 +42,8 @@ private:
     rclcpp::Publisher<control_msgs::msg::JointJog>::SharedPtr joint_pub_;
     rclcpp::Publisher<moveit_msgs::msg::PlanningScene>::SharedPtr collision_pub_;
     rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr servo_start_client_;
+
+    std::unique_ptr<GripperController> gripper_controller_;
 
     int dof_;
     int ros_queue_size_;

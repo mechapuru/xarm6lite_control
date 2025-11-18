@@ -21,6 +21,7 @@
   <depend>xarm_description</depend>
   <depend>xarm_controller</depend>
   <depend>xarm_moveit_config</depend>
+  <depend>dynamixel_sdk</depend>
 
   <exec_depend>rviz2</exec_depend>
   <exec_depend>launch</exec_depend>
