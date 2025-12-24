@@ -232,13 +232,16 @@ bool JoyToServoPub::_convert_xbox360_joy_to_cmd(
         return false;
     }
 
-    // The bread and butter: map buttons to twist commands
-    twist->twist.linear.x = axes[left_stick_fb];
-    twist->twist.linear.y = axes[left_stick_lr];
-    twist->twist.linear.z = -0.5 * (axes[left_trigger] - axes[right_trigger]);
-    twist->twist.angular.y = axes[right_stick_fb];
-    twist->twist.angular.x = axes[right_stick_lr];
-    twist->twist.angular.z = buttons[XBOX360_BTN_LB] - buttons[XBOX360_BTN_RB];
+    // Button-based Cartesian control: D-Pad for XY, Triggers for Z
+    // D-Pad axes return -1, 0, or +1 which is perfect for binary velocity control
+    twist->twist.linear.x = axes[cross_key_fb];  // D-Pad Up (+1) / Down (-1)
+    twist->twist.linear.y = axes[cross_key_lr];  // D-Pad Right (+1) / Left (-1)
+    twist->twist.linear.z = -0.5 * (axes[left_trigger] - axes[right_trigger]);  // Triggers (normalized)
+    
+    // No angular control - keep end-effector orientation fixed
+    twist->twist.angular.x = 0.0;
+    twist->twist.angular.y = 0.0;
+    twist->twist.angular.z = 0.0;
 
     return true;
 }

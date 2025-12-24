@@ -61,7 +61,7 @@ This command starts the RealSense camera node. You can add parameters to configu
 
 ```bash
 source install/setup.bash
-ros2 launch realsense2_camera rs_launch.py rgb_camera.color_profile:="640,360,60" depth_module.depth_profile:="640,360,60"
+ros2 launch realsense2_camera rs_launch.py rgb_camera.color_profile:="640,360,60" depth_module.depth_profile:="640,360,60" pointcloud.enable:=true
 ```
 
 ### Step 4.2: Verify Operation
@@ -92,7 +92,7 @@ Once the system is running, you can record all the important, synchronized data 
 This will create a bag file named `sync_data_bag` in your current directory.
 
 ```bash
-ros2 bag record -o sync_data_bag_x2 \
+ros2 bag record -o sync_data_bag_59\
 /lite6_traj_controller/controller_state \
 /ufactory/joint_states \
 /gripper/command \
@@ -101,7 +101,7 @@ ros2 bag record -o sync_data_bag_x2 \
 /camera/camera/depth/image_rect_raw
 
 
-ros2 bag record -o sync_data_bag_20\
+ros2 bag record -o sync_data_bag_21\
 --compression-mode file --compression-format zstd \
 /lite6_traj_controller/controller_state \
 /ufactory/joint_states \
