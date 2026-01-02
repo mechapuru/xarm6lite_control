@@ -213,16 +213,32 @@ bool JoyToServoPub::_convert_xbox360_joy_to_cmd(
         planning_frame_ = ee_frame_name_;
     }
     
-    // Button-based Cartesian control: D-Pad for XY, X/Y buttons for Z
-    // All inputs are now binary for consistent velocity control
-    twist->twist.linear.x = axes[cross_key_fb];  // D-Pad Up (+1) / Down (-1)
-    twist->twist.linear.y = axes[cross_key_lr];  // D-Pad Right (+1) / Left (-1)
-    twist->twist.linear.z = buttons[XBOX360_BTN_Y] - buttons[XBOX360_BTN_X];  // Y (+1 up) / X (-1 down)
-    
-    // No angular control - keep end-effector orientation fixed
-    twist->twist.angular.x = 0.0;
-    twist->twist.angular.y = 0.0;
-    twist->twist.angular.z = 0.0;
+    // Gripper control is handled in _joy_callback directly
+    // to allow simultaneous arm and gripper motion.
+    // We check for other buttons to decide arm motion.
+    if (axes[cross_key_lr] || axes[cross_key_fb])
+    {
+        // Map the D_PAD to the proximal joints
+        joint->joint_names.push_back("joint1");
+        joint->velocities.push_back(axes[cross_key_lr] * 1);
+        joint->joint_names.push_back("joint2");
+        joint->velocities.push_back(axes[cross_key_fb] * 1);
+
+        // The following lines are commented out to prioritize gripper control
+        // joint->joint_names.push_back("joint" + std::to_string(dof_));
+        // joint->velocities.push_back((buttons[XBOX360_BTN_B] - buttons[XBOX360_BTN_X]) * 1);
+        // joint->joint_names.push_back("joint" + std::to_string(dof_ - 1));
+        // joint->velocities.push_back((buttons[XBOX360_BTN_Y] - buttons[XBOX360_BTN_A]) * 1);
+        return false;
+    }
+
+    // The bread and butter: map buttons to twist commands
+    twist->twist.linear.x = axes[left_stick_fb];
+    twist->twist.linear.y = axes[left_stick_lr];
+    twist->twist.linear.z = -0.5 * (axes[left_trigger] - axes[right_trigger]);
+    twist->twist.angular.y = axes[right_stick_fb];
+    twist->twist.angular.x = axes[right_stick_lr];
+    twist->twist.angular.z = buttons[XBOX360_BTN_LB] - buttons[XBOX360_BTN_RB];
 
     return true;
 }
