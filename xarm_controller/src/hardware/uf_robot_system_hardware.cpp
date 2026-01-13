@@ -379,6 +379,7 @@ namespace uf_robot_hardware
             curr_write_time_ = node_->get_clock()->now();
             if (curr_write_time_.seconds() - prev_write_time_.seconds() > 1 || _check_cmds_is_change(prev_cmds_float_, cmds_float_)) {
                 // RCLCPP_INFO(LOGGER, "[%s] positon: %s", robot_ip_.c_str(), pos_str.c_str());
+                // RCLCPP_INFO(LOGGER, "[%f] cmds_float_");
                 cmd_ret = xarm_driver_.arm->set_servo_angle_j(cmds_float_, 0, 0, 0);
                 if (cmd_ret != 0) {
                     RCLCPP_WARN(LOGGER, "[%s] set_servo_angle_j, ret= %d", robot_ip_.c_str(), cmd_ret);

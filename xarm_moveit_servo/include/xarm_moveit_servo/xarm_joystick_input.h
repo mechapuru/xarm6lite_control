@@ -38,8 +38,10 @@ private:
 
     void _filter_twist_msg(std::unique_ptr<geometry_msgs::msg::TwistStamped>& twist, double val = 0.05);
     void _joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg);
+    void _gripper_cmd_callback(const std_msgs::msg::Int32::SharedPtr msg);
 
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;
+    rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr gripper_cmd_sub_;
     rclcpp::Publisher<geometry_msgs::msg::TwistStamped>::SharedPtr twist_pub_;
     rclcpp::Publisher<control_msgs::msg::JointJog>::SharedPtr joint_pub_;
     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr gripper_command_pub_;

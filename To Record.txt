@@ -1,0 +1,45 @@
+Steps to follow to record the data.
+Data should be recorded after calibrating the external camera
+
+
+
+1. Colcon Build
+2. Source install/setup.bash
+
+
+3. Move the arm to an initial position by calling 
+
+ros2 launch xarm_api xarm6_driver.launch.py robot_ip:=192.168.1.175
+In a seperate terminal run
+
+python3 movetoinitial.py
+
+
+
+4. Connect xarm with
+
+ros2 launch xarm_moveit_servo lite6_moveit_servo_realmove.launch.py robot_ip:=192.168.1.175 joystick_type:=1 gripper_port:=/dev/ttyUSB0
+
+5. Connect both cameras by running the following in two terminals
+
+ros2 launch realsense2_camera rs_launch.py \
+  camera_name:=camera1 \
+  camera_namespace:=camera1 \
+  usb_port_id:=2-1 \
+  rgb_camera.color_profile:="640,360,30" \
+  depth_module.depth_profile:="640,360,30"
+
+ros2 launch realsense2_camera rs_launch.py \
+  camera_name:=camera2 \
+  camera_namespace:=camera2 \
+  usb_port_id:=2-2 \
+  rgb_camera.color_profile:="640,360,30" \
+  depth_module.depth_profile:="640,360,30"
+
+ 6. check ros2 topics 
+ ros2 topic list 
+
+
+
+
+

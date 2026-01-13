@@ -122,6 +122,7 @@ JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions& options)
 
     // Setup pub/sub
     joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(joy_topic_, ros_queue_size_, std::bind(&JoyToServoPub::_joy_callback, this, std::placeholders::_1));
+    gripper_cmd_sub_ = this->create_subscription<std_msgs::msg::Int32>("/gripper/command", ros_queue_size_, std::bind(&JoyToServoPub::_gripper_cmd_callback, this, std::placeholders::_1));
 
     twist_pub_ = this->create_publisher<geometry_msgs::msg::TwistStamped>(cartesian_command_in_topic_, ros_queue_size_);
     joint_pub_ = this->create_publisher<control_msgs::msg::JointJog>(joint_command_in_topic_, ros_queue_size_);
@@ -357,6 +358,23 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
         joint_msg->header.frame_id = "joint";
         joint_pub_->publish(std::move(joint_msg));
     }
+}
+
+void JoyToServoPub::_gripper_cmd_callback(const std_msgs::msg::Int32::SharedPtr msg)
+{
+    float gripper_cmd_velocity = msg->data;
+    int32_t gripper_current_pos = 0;
+    
+    // Command the gripper (hardware)
+    gripper_controller_->moveWithVelocity(gripper_cmd_velocity, gripper_current_pos);
+
+    // Normalize and publish state
+    auto gripper_state_msg = std::make_unique<std_msgs::msg::Float64>();
+    double normalized_pos = (double)(gripper_current_pos - GripperController::POS_MIN) / (double)(GripperController::POS_MAX - GripperController::POS_MIN);
+    normalized_pos = std::max(0.0, std::min(1.0, normalized_pos));
+
+    gripper_state_msg->data = normalized_pos;
+    gripper_state_pub_->publish(std::move(gripper_state_msg));
 }
 
 }
