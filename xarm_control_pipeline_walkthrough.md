@@ -1,4 +1,4 @@
-# xArm6 Lite Control Pipeline: Senior Debugger Analysis
+# xArm6 Lite Control Pipeline: For Debugging
 
 **Command Under Analysis:**
 ```bash
