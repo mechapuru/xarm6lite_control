@@ -1,3 +1,16 @@
+# A Tele Operation Setup for xarm6 lite with a custom gripper.
+
+//note - This script is a modificaiton of the original xarm_ros2 repository.
+
+
+## Important Files 
+
+1. Read the [xarm_control_guide.md](./xarm_control_guide.md) for the basic explanation of the control pipeline and configurable tuning parameters.
+2. Read the [gripper_integration.md](./gripper_integration.md) for a detailed explanation of the gripper integration.
+3. Read the [xarm_control_pipeline_walkthrough.md](./xarm_control_pipeline_walkthrough.md) for a detailed explanation of the control pipeline.
+
+
+
 # xarm_ros2
 
 For simplified Chinese version: [简体中文版](./ReadMe_cn.md)
