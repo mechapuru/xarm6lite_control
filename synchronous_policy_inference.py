@@ -1,4 +1,28 @@
 #!/usr/bin/env python3
+"""
+Synchronous Policy Inference Node
+
+REQUIRED SETUP BEFORE RUNNING:
+==============================
+
+Terminal 1 - Robot + Gripper (inference mode):
+    cd /home/paddy/rrc/xarm_ws
+    source install/setup.bash
+    ros2 launch xarm_moveit_servo lite6_moveit_servo_realmove.launch.py \\
+        robot_ip:=192.168.1.175 \\
+        gripper_port:=/dev/ttyUSB0 \\
+        inference_mode:=true
+
+Terminal 2 - Camera:
+    ros2 launch realsense2_camera rs_launch.py \\
+        camera_name:=camera \\
+        camera_namespace:=camera \\
+        rgb_camera.color_profile:="640,480,30" \\
+        depth_module.depth_profile:="640,480,30"
+
+Terminal 3 - Run this script:
+    python3 synchronous_policy_inference.py
+"""
 
 import rclpy
 from rclpy.node import Node
@@ -37,7 +61,7 @@ class SynchronousPolicyInferenceNode(Node):
         self.declare_parameter('joint_state_topic', '/ufactory/joint_states')
         self.joint_state_topic = self.get_parameter('joint_state_topic').value
 
-        self.declare_parameter('action_execution_horizon', 13)
+        self.declare_parameter('action_execution_horizon', 5)
         self.action_execution_horizon = self.get_parameter('action_execution_horizon').value
         
         self.bridge = CvBridge()
@@ -103,7 +127,7 @@ class SynchronousPolicyInferenceNode(Node):
 
     def synchronized_callback(self, rgb_msg, depth_msg, joint_msg):
         """Callback for synchronized sensor data."""
-        self.get_logger().info("Received synchronized frames!", throttle_duration_sec=2)
+        # self.get_logger().info("Received synchronized frames!", throttle_duration_sec=2)
         try:
             rgb_img = self.bridge.imgmsg_to_cv2(rgb_msg, "bgr8")
             # Handle depth encoding
@@ -231,7 +255,7 @@ class SynchronousPolicyInferenceNode(Node):
                 else:
                     cmd_msg.data = 0
                 self.gripper_command_pub.publish(cmd_msg)
-                print("got gripper message", cmd_msg.data)
+                # print("got gripper message", cmd_msg.data)
                  # Default stop
                 # self.gripper_action_history.append(pred_gripper_val)
 
@@ -264,12 +288,12 @@ class SynchronousPolicyInferenceNode(Node):
 
             # Wait for the action to complete (blocking with timeout)
             start_time = time.time()
-            timeout = 0.5  # Timeout in seconds
+            timeout = 15  # Timeout in seconds
             
             while rclpy.ok():
                 # Check for timeout
                 if time.time() - start_time > timeout:
-                    # self.get_logger().warn("Action execution timed out.")
+                    self.get_logger().warn("Action execution timed out.")
                     break
                 
                 # Check error if we have fresh joint states
@@ -278,7 +302,8 @@ class SynchronousPolicyInferenceNode(Node):
                 
                 if current_joints:
                     error = max([abs(c - t) for c, t in zip(current_joints, target_positions)])
-                    if error < 0.02: # 0.02 radians ~ 1.15 degrees tolerance
+                    if error < 0.02:
+                        print("reached the goal") # 0.02 radians ~ 1.15 degrees tolerance
                         break
                 
                 time.sleep(0.01) 
