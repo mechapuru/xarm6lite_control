@@ -9,6 +9,50 @@
 2. Read the [gripper_integration.md](./gripper_integration.md) for a detailed explanation of the gripper integration.
 3. Read the [xarm_control_pipeline_walkthrough.md](./xarm_control_pipeline_walkthrough.md) for a detailed explanation of the control pipeline.
 
+## Dynamixel SDK Installation (for Custom Gripper)
+
+After installing xarm_ros2, the Dynamixel SDK was installed for controlling the custom gripper. The integration uses **Option 1: Git Clone** from the [Dynamixel SDK documentation](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/download/#download-sdk).
+
+### Current Approach (Hardcoded Paths)
+
+1. **Clone the SDK** outside the workspace:
+   ```bash
+   cd ~/rrc
+   git clone https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+   ```
+
+2. **Build the SDK** using colcon:
+   ```bash
+   cd ~/rrc/DynamixelSDK
+   colcon build
+   ```
+
+3. **Hardcoded paths** in `xarm_moveit_servo/CMakeLists.txt`:
+   ```cmake
+   include_directories(/home/paddy/rrc/DynamixelSDK/c++/include)
+   link_directories(/home/paddy/rrc/DynamixelSDK/install/dynamixel_sdk/lib)
+   target_link_libraries(xarm_joystick_input dynamixel_sdk)
+   ```
+
+> **⚠️ Important:** If using this on a different system, you must update the paths in `xarm_moveit_servo/CMakeLists.txt` to match your SDK installation directory.
+
+### Alternative Approaches (Recommended for Portability)
+
+| Approach | Command | Pros |
+|----------|---------|------|
+| **ROS 2 Package (Best)** | `sudo apt install ros-humble-dynamixel-sdk` | No path changes needed, auto-updated |
+| **Workspace Package** | Clone SDK into `~/dev_ws/src/` and use `find_package` | Version-controlled with workspace |
+
+For the ROS 2 package approach, modify `CMakeLists.txt`:
+```cmake
+find_package(dynamixel_sdk REQUIRED)
+ament_target_dependencies(xarm_joystick_input ${THIS_PACKAGE_INCLUDE_DEPENDS} dynamixel_sdk)
+```
+
+And add to `package.xml`:
+```xml
+<depend>dynamixel_sdk</depend>
+```
 
 
 # xarm_ros2
