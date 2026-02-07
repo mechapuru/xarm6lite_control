@@ -1,4 +1,4 @@
-# xArm6 Lite Control Pipeline: Senior Debugger Analysis
+# xArm6 Lite Control Pipeline: For Debugging
 
 **Command Under Analysis:**
 ```bash
@@ -13,7 +13,7 @@ ros2 launch xarm_moveit_servo lite6_moveit_servo_realmove.launch.py robot_ip:=19
 **File**: [`lite6_moveit_servo_realmove.launch.py`](file:///home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/launch/lite6_moveit_servo_realmove.launch.py)
 
 ```python
-# Line 33-52: Includes the main launch file with parameters
+# Line 34-55: Includes the main launch file with parameters
 robot_moveit_servo_launch = IncludeLaunchDescription(
     PythonLaunchDescriptionSource(PathJoinSubstitution([
         FindPackageShare('xarm_moveit_servo'), 
@@ -83,7 +83,7 @@ CallbackReturn UFRobotSystemHardware::on_init(const hardware_interface::Hardware
     velocity_cmds_.resize(info_.joints.size(), NaN);    // [6]
 }
 
-// STEP 2.2.2: _init_ufactory_driver() (line 65)
+// STEP 2.2.2: _init_ufactory_driver() (line 48)
 void UFRobotSystemHardware::_init_ufactory_driver() {
     // Line 156: Initialize xarm_driver with TCP connection
     xarm_driver_.init(node_, robot_ip_, true);  // true = in_ros_control mode
@@ -146,10 +146,10 @@ CallbackReturn UFRobotSystemHardware::on_activate(...) {
 
 ### Step 3.1: Linux Joystick → joy_node
 **Node**: `joy::Joy` (from ros2 `joy` package)
-**Config** (from launch file line 253-256):
+**Config** (from launch file line 256-258):
 ```python
 'autorepeat_rate': 30.0,   # 30 Hz publishing rate
-'device_id': 0,            # /dev/input/js0
+# device_id defaults to 0 (/dev/input/js0)
 ```
 
 **Output Topic**: `/joy`
@@ -181,26 +181,26 @@ sensor_msgs/msg/Joy:
 **File**: [`xarm_joystick_input.cpp`](file:///home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp)
 
 ```cpp
-// Line 271-277: _joy_callback receives Joy message
+// Line 275-277: _joy_callback receives Joy message
 void _joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg) {
-    // === GRIPPER CONTROL (lines 283-309) ===
+    // === GRIPPER CONTROL (lines 293-319) ===
     // Processed FIRST, in parallel with arm control
-    int gripper_cmd_vel = 0;
-    if (msg->buttons[A_BUTTON]) {       // A pressed → close
-        gripper_cmd_vel = -GRIPPER_CLOSE_VEL;  // -400
-    } else if (msg->buttons[B_BUTTON]) { // B pressed → open
-        gripper_cmd_vel = GRIPPER_OPEN_VEL;    // +400
+    int gripper_cmd_velocity = 0;
+    if (msg->buttons[A_BUTTON]) {       // A pressed → OPEN
+        gripper_cmd_velocity = GRIPPER_OPEN_VELOCITY;   // +30
+    } else if (msg->buttons[B_BUTTON]) { // B pressed → CLOSE
+        gripper_cmd_velocity = GRIPPER_CLOSE_VELOCITY;  // -30
     }
     // Direct Dynamixel SDK call (bypasses ROS)
-    gripper_controller_->move(gripper_cmd_vel, &gripper_pos);
+    gripper_controller_->moveWithVelocity(gripper_cmd_velocity, gripper_current_pos);
     
     // === ARM CONTROL (lines 313-359) ===
     // Calls _convert_xbox360_joy_to_cmd()
 }
 
-// Line 186-245: Xbox conversion function
+// Line 187-249: Xbox conversion function
 bool _convert_xbox360_joy_to_cmd(Joy msg, TwistStamped& twist, JointJog& joint) {
-    // Line 189-196: Axis indices for WIRED controller
+    // Line 193-200: Axis indices for WIRED controller
     int left_stick_fb   = 1;   // Forward/back
     int left_stick_lr   = 0;   // Left/right  
     int LT_trigger      = 2;   // Left trigger
@@ -208,7 +208,7 @@ bool _convert_xbox360_joy_to_cmd(Joy msg, TwistStamped& twist, JointJog& joint) 
     int right_stick_lr  = 3;
     int RT_trigger      = 5;   // Right trigger
     
-    // Line 237-243: DIRECT AXIS MAPPING TO TWIST
+    // Line 241-246: DIRECT AXIS MAPPING TO TWIST
     twist.twist.linear.x  = msg.axes[left_stick_fb];   // Forward/back → X
     twist.twist.linear.y  = msg.axes[left_stick_lr];   // Left/right → Y
     twist.twist.linear.z  = -0.5 * (msg.axes[LT_trigger] - msg.axes[RT_trigger]);  // Triggers → Z
@@ -250,10 +250,10 @@ OUTPUT (TwistStamped):
 publish_period: 0.034        # ~30 Hz output rate
 command_in_type: "unitless"  # Input is [-1, 1] range
 scale:
-  linear: 0.3                # meters per second max
-  rotational: 0.5            # radians per second max
-  joint: 0.5                 # joint rad/s max
-low_pass_filter_coeff: 2.0   # Smoothing on joint states
+  linear: 0.1                # meters per second max
+  rotational: 0.2            # radians per second max
+  joint: 0.2                 # joint rad/s max
+low_pass_filter_coeff: 50.0  # Smoothing on joint states
 ```
 
 ### Step 4.2: Twist to Joint Delta Conversion
@@ -263,8 +263,8 @@ bool cartesianServoCalcs(TwistStamped& cmd, JointTrajectory& joint_trajectory) {
     // STEP 1: Scale the unitless twist to physical velocities
     // Line 152: scaleCartesianCommand()
     Eigen::VectorXd delta_x = scaleCartesianCommand(cmd);
-    // Result: delta_x = [linear.x * 0.3, linear.y * 0.3, linear.z * 0.3,
-    //                    angular.x * 0.5, angular.y * 0.5, angular.z * 0.5]
+    // Result: delta_x = [linear.x * 0.1, linear.y * 0.1, linear.z * 0.1,
+    //                    angular.x * 0.2, angular.y * 0.2, angular.z * 0.2]
     //         * publish_period (0.034s)
     
     // STEP 2: Get Jacobian matrix from current robot state
@@ -287,7 +287,7 @@ bool cartesianServoCalcs(TwistStamped& cmd, JointTrajectory& joint_trajectory) {
 **Data Transformation Example**:
 ```
 INPUT (scaled twist):
-  delta_x = [0.0102, 0.0, 0.0102, 0.0, 0.0, 0.0]  # 0.3m/s * 0.034s for x,z
+  delta_x = [0.0034, 0.0, 0.0034, 0.0, 0.0, 0.0]  # 0.1m/s * 0.034s for x,z
 
 JACOBIAN (example at some pose):
   J = [j11 ... j16]
@@ -332,10 +332,10 @@ controller_manager:
 lite6_traj_controller:
   ros__parameters:
     joints: [joint1, joint2, joint3, joint4, joint5, joint6]
-    command_interfaces: [position]
+    command_interfaces: [position, velocity]
     state_interfaces: [position, velocity]
-    state_publish_rate: 100.0
-    action_monitor_rate: 20.0
+    state_publish_rate: 30.0
+    action_monitor_rate: 10.0
 ```
 
 ### Step 5.2: Trajectory Interpolation
@@ -463,7 +463,7 @@ cmds_float_[6] = {
                                          │ /joy @ 30 Hz
                                          ▼
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│ JoyToServoPub (_joy_callback @ xarm_joystick_input.cpp:271)                    │
+│ JoyToServoPub (_joy_callback @ xarm_joystick_input.cpp:275)                    │
 │                                                                                 │
 │ axes[1] → twist.linear.x                                                       │
 │ axes[0] → twist.linear.y                                                       │
@@ -480,8 +480,8 @@ cmds_float_[6] = {
 │ moveit_servo::ServoNode → ServoCalcs                                           │
 │                                                                                 │
 │ 1. SCALING (scaleCartesianCommand):                                            │
-│    linear *= 0.3 m/s × 0.034s = 0.0102 m per cycle                            │
-│    angular *= 0.5 rad/s × 0.034s = 0.017 rad per cycle                        │
+│    linear *= 0.1 m/s × 0.034s = 0.0034 m per cycle                            │
+│    angular *= 0.2 rad/s × 0.034s = 0.0068 rad per cycle                        │
 │                                                                                 │
 │ 2. INVERSE KINEMATICS (cartesianServoCalcs):                                   │
 │    delta_theta[6] = Jacobian⁻¹ × delta_x[6]                                   │
@@ -550,9 +550,9 @@ cmds_float_[6] = {
 
 | File | Purpose | Critical Lines |
 |------|---------|----------------|
-| [`lite6_moveit_servo_realmove.launch.py`](file:///home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/launch/lite6_moveit_servo_realmove.launch.py) | Entry launch | 33-52 |
+| [`lite6_moveit_servo_realmove.launch.py`](file:///home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/launch/lite6_moveit_servo_realmove.launch.py) | Entry launch | 34-55 |
 | [`_robot_moveit_servo_realmove.launch.py`](file:///home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/launch/_robot_moveit_servo_realmove.launch.py) | Main launch | 206-261 (container) |
-| [`xarm_joystick_input.cpp`](file:///home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp) | Joy→Twist | 186-245, 271-309 |
+| [`xarm_joystick_input.cpp`](file:///home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_moveit_servo/src/xarm_joystick_input.cpp) | Joy→Twist | 187-249, 275-319 |
 | [`servo_calcs.h`](file:///opt/ros/humble/include/moveit_servo/servo_calcs.h) | IK header | 125-126, 152-158 |
 | [`trajectory.hpp`](file:///opt/ros/humble/include/joint_trajectory_controller/joint_trajectory_controller/trajectory.hpp) | Interpolation | 127-130 |
 | [`uf_robot_system_hardware.cpp`](file:///home/paddy/rrc/xarm_ws/src/xarm_ros2/xarm_controller/src/hardware/uf_robot_system_hardware.cpp) | HW interface | 295-336, 339-396 |

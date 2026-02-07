@@ -1,45 +1,107 @@
-Steps to follow to record the data.
-Data should be recorded after calibrating the external camera
+# Data Recording Guide
 
+Steps to record synchronized robot, gripper, and camera data.
 
+> **Note**: Ensure the external camera is calibrated before recording.
 
-1. Colcon Build
-2. Source install/setup.bash
+---
 
+## Step 1: Build and Source Workspace
 
-3. Move the arm to an initial position by calling 
+```bash
+cd ~/rrc/xarm_ws
+colcon build
+source install/setup.bash
+```
 
-ros2 launch xarm_api xarm6_driver.launch.py robot_ip:=192.168.1.175
-In a seperate terminal run
+---
 
+## Step 2: Move Robot to Initial Position
+
+First, launch the xArm driver:
+```bash
+ros2 launch xarm_api lite6_driver.launch.py robot_ip:=192.168.1.175
+```
+
+In a **separate terminal**, run the initialization script:
+```bash
+cd ~/rrc/xarm_ws/src/xarm_ros2
 python3 movetoinitial.py
+```
 
+Wait for the robot to reach the initial position (pose: `[125, 10, 177, 3.14, 0, 0]`).
 
+**After the motion is complete, close the xarm_api terminal (Ctrl+C).**
 
-4. Connect xarm with
+---
 
-ros2 launch xarm_moveit_servo lite6_moveit_servo_realmove.launch.py robot_ip:=192.168.1.175 joystick_type:=1 gripper_port:=/dev/ttyUSB0
+## Step 3: Launch Robot Control with Gripper
 
-5. Connect both cameras by running the following in two terminals
+```bash
+source install/setup.bash
+ros2 launch xarm_moveit_servo lite6_moveit_servo_realmove.launch.py \
+  robot_ip:=192.168.1.175 \
+  joystick_type:=1 \
+  gripper_port:=/dev/ttyUSB0
+```
 
+---
+
+## Step 4: Launch Camera
+
+In a new terminal:
+```bash
+source install/setup.bash
 ros2 launch realsense2_camera rs_launch.py \
-  camera_name:=camera1 \
-  camera_namespace:=camera1 \
-  usb_port_id:=2-1 \
+  camera_name:=camera \
+  camera_namespace:=camera \
   rgb_camera.color_profile:="640,360,30" \
   depth_module.depth_profile:="640,360,30"
+```
 
-ros2 launch realsense2_camera rs_launch.py \
-  camera_name:=camera2 \
-  camera_namespace:=camera2 \
-  usb_port_id:=2-2 \
-  rgb_camera.color_profile:="640,360,30" \
-  depth_module.depth_profile:="640,360,30"
+---
 
- 6. check ros2 topics 
- ros2 topic list 
+## Step 5: Verify Topics
 
+Check that all required topics are available:
+```bash
+ros2 topic list | grep -E "gripper|joint|camera"
+```
 
+Expected topics:
+- `/gripper/command`
+- `/gripper/state`
+- `/ufactory/joint_states`
+- `/lite6_traj_controller/controller_state`
+- `/camera/camera/color/image_raw`
+- `/camera/camera/depth/image_rect_raw`
 
+---
 
+## Step 6: Start Recording
 
+```bash
+ros2 bag record -o recording_001 \
+  --compression-mode file --compression-format zstd \
+  /lite6_traj_controller/controller_state \
+  /ufactory/joint_states \
+  /gripper/command \
+  /gripper/state \
+  /camera/camera/color/image_raw \
+  /camera/camera/depth/image_rect_raw
+```
+
+Operate the robot with the joystick. Press **Ctrl+C** to stop recording.
+
+---
+
+## Controls Reference
+
+| Input | Action |
+|-------|--------|
+| Left Stick | X/Y movement |
+| Triggers (LT/RT) | Z movement (up/down) |
+| Right Stick | Pitch/Roll |
+| Bumpers (LB/RB) | Yaw |
+| A Button | Open gripper |
+| B Button | Close gripper |
