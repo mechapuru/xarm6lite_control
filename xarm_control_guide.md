@@ -61,11 +61,12 @@ Here is a detailed look at each file, node, and configuration involved in the pr
         - **Right Stick (F/B)**: Angular Y Velocity (pitch)
         - **Right Stick (L/R)**: Angular X Velocity (roll)
         - **Left & Right Bumpers**: Angular Z Velocity (yaw)
-    - **Joint Space Control (Secondary Mode)**: When using the D-Pad or face buttons (A, B, X, Y), the node publishes a `control_msgs/msg/JointJog` message to the `/servo_server/delta_joint_cmds` topic. This allows for direct control ("jogging") of individual joints.
+    - **Joint Space Control (Secondary Mode)**: When using the D-Pad, the node publishes a `control_msgs/msg/JointJog` message to the `/servo_server/delta_joint_cmds` topic. This allows for direct control ("jogging") of individual joints.
         - **D-Pad (L/R)**: Joint 1 Velocity
         - **D-Pad (U/D)**: Joint 2 Velocity
-        - **Y & A Buttons**: Joint 5 Velocity
-        - **B & X Buttons**: Joint 6 Velocity
+    - **Gripper Control**: The **A** and **B** buttons control the gripper:
+        - **A Button**: Opens the gripper (positive velocity)
+        - **B Button**: Closes the gripper (negative velocity)
 
 #### `moveit_servo::ServoNode`
 - **Source File**: Pre-compiled from the `moveit_servo` package.
@@ -84,13 +85,13 @@ Here is a detailed look at each file, node, and configuration involved in the pr
 - **Source File**: Pre-compiled from the `ros2_control` packages.
 - **Configuration**: `xarm_controller/config/lite6_controllers.yaml`
 - **Purpose**: To receive a trajectory from a high-level planner (like `moveit_servo`) and ensure the robot's hardware follows it precisely.
-- **Frequency**: The internal control loop runs at **150 Hz** (defined by `update_rate: 150`), but it publishes its status to the `/lite6_traj_controller/controller_state` topic at a lower rate of **~25 Hz** (defined by `state_publish_rate: 25.0`). This is a common optimization to reduce network traffic.
+- **Frequency**: The internal control loop runs at **250 Hz** (defined by `update_rate: 250`), and publishes status to `/lite6_traj_controller/controller_state` at **30 Hz** (defined by `state_publish_rate: 30.0`).
 - **Logic & Transformation**:
     1. Receives the `JointTrajectory` message from `moveit_servo` (~30 Hz).
-    2. At a much higher rate (150 Hz), it **interpolates along this trajectory** to calculate the exact joint command required for that specific moment in time (every ~6.7ms).
+    2. At a much higher rate (250 Hz), it **interpolates along this trajectory** to calculate the exact joint command required for that specific moment in time (every ~4ms).
     3. It compares this desired command to the actual measured state and computes the final command to send to the hardware.
     4. The `interface_name: position` parameter explicitly tells the controller to send **position commands** to the hardware interface.
-- **Output**: A stream of position commands sent to the hardware interface at 150 Hz.
+- **Output**: A stream of position commands sent to the hardware interface at 250 Hz.
 
 #### `UFRobotSystemHardware` (Hardware Interface)
 - **Source File**: `xarm_controller/src/hardware/uf_robot_system_hardware.cpp`
@@ -138,11 +139,11 @@ To address this at the source, you can tune the low-pass filter that `moveit_ser
 
 ```yaml
 ## Incoming Joint State properties
-low_pass_filter_coeff: 2.0  # Larger --> trust the filtered data more, trust the measurements less.
+low_pass_filter_coeff: 50.0  # Larger --> trust the filtered data more, trust the measurements less.
 ```
 
-- **How it works**: This filter smooths the joint states that `moveit_servo` uses as feedback. By providing a less noisy input to its internal calculations, `moveit_servo` will generate a smoother output trajectory (`JointTrajectory` message).
-- **Tuning**: The default value is `2.0`. Increasing this to a higher value (e.g., `5.0` or `10.0`) will apply more aggressive filtering, leading to a smoother plan with less jitter in velocity and acceleration. This is a key parameter for improving the quality of the generated motion.
+- **How it works**: This filter smooths the joint states that `moveit_servo` uses as feedback. By providing a less noisy input to its internal calculations, `moveit_servo` will generate a smoother output trajectory.
+- **Tuning**: The default value is now `50.0`. Decreasing this value will make the robot more responsive but potentially jittery. Increasing it further will apply more aggressive filtering.
 
 
 
@@ -150,9 +151,9 @@ low_pass_filter_coeff: 2.0  # Larger --> trust the filtered data more, trust the
 
 - **`moveit_servo` (~30-60 Hz)**: This node sends a new "mini-plan" or trajectory to the controller. Its frequency is governed by `publish_period`.
 
-- **`joint_trajectory_controller` (150 Hz)**: This controller runs at a much higher frequency, defined by `update_rate`. In each cycle, it interpolates the plan from `moveit_servo` and sends a single, fine-grained command to the hardware interface.
+- **`joint_trajectory_controller` (250 Hz)**: This controller runs at a much higher frequency, defined by `update_rate`. In each cycle, it interpolates the plan from `moveit_servo` and sends a single, fine-grained command to the hardware interface.
 
-- **Hardware Capability**: The ROS 2 driver sends commands at 150 Hz because the `update_rate` is 150. This indicates that the developers found this rate to be effective. The robot's own internal controller will process this stream of commands using its own high-frequency loops (e.g., >>200 Hz), using the most recent command it has received as its target.
+- **Hardware Capability**: The ROS 2 driver sends commands at 250 Hz because the `update_rate` is 250. The robot's own internal controller processes this stream using its own high-frequency loops (e.g., >>200 Hz).
 
 
 
@@ -172,7 +173,7 @@ low_pass_filter_coeff: 2.0  # Larger --> trust the filtered data more, trust the
 
   ```
 
-- **Effect**: This will make `moveit_servo` send new "mini-plans" to the `joint_trajectory_controller` more often, resulting in motion that is more reactive to your joystick input. The `joint_trajectory_controller` will still perform its own 150 Hz interpolation on these more frequently updated plans.
+- **Effect**: This will make `moveit_servo` send new "mini-plans" to the `joint_trajectory_controller` more often, resulting in motion that is more reactive to your joystick input. The `joint_trajectory_controller` will still perform its own 250 Hz interpolation on these more frequently updated plans.
 
 
 
@@ -264,7 +265,7 @@ You can inspect the key topics in the pipeline in real-time using `ros2 topic ec
 
 
 
--   **`joint_trajectory_controller` State (~25 Hz):** To see the final interpolated command sent to the hardware interface, along with detailed controller status (feedback, error, etc.), use:
+-   **`joint_trajectory_controller` State (~30 Hz):** To see the final interpolated command sent to the hardware interface, along with detailed controller status (feedback, error, etc.), use:
 
     ```bash
 
@@ -272,7 +273,7 @@ You can inspect the key topics in the pipeline in real-time using `ros2 topic ec
 
     ```
 
-    *   The `output.positions` field in this message shows the command sent to the hardware. While this topic publishes at ~25 Hz, the commands are being calculated and sent internally at 150 Hz.
+    *   The `output.positions` field in this message shows the command sent to the hardware. While this topic publishes at ~30 Hz, the commands are being calculated and sent internally at 250 Hz.
 
 
 
@@ -354,19 +355,44 @@ To visualize the collected data, you can use the provided Python scripts. The go
 
 By comparing the "Calculated Velocity" plots, you can determine if any fluctuations are originating from the `moveit_servo` plan or from the `joint_trajectory_controller`'s execution.
 
+---
 
+## 7. Data Collection
 
-1. Checked by keeping the xbox controller stationary. For stationary commands, all the topics remain stationary.
-2. Commented out move_servo_j in the hardware interface file to see what happens.
-3. The controller is working. No input shows zero across the /joy topic.
-4. While /lite6_traj_controller/joint_trajectory remains stationary, in the rostopic /lite6_traj_controller/controller_state there is error in the position space, even with zero external commands and stationary robot.
-5. Going to try to measure the error published by /lite6_traj_controller/controller_state while Changing filter to 1 or 0.2 in xarm_joystick_input.cpp 
-6. Made the low_latency_mode to true in xarm_moveit_servo_config
-7. set the low_latency_mode to false again, and low_pass_filter to 0.2 (original) but lite6_controller publish_rate is increased to 150.
-8. Changing update rate to 250, and publish rate to 150. 
-9. changing joint topic to ufactory/joint_state. new_topic
-10. changed publish_rate of the arm back to 25. new_topic_new_state.
-11. Changing low_pass_filter to 10. low_10_new.
-12. Making low_latency_mode true in moveit_servo. low_lat XXX Not Working
-13. Decreasing publish_rate of moveit.
-14. Back to normal publish_rate
+To collect synchronized data from the robot, gripper, and cameras for offline analysis or training:
+
+### 7.1 Single Camera Setup
+```bash
+ros2 bag record -o data_bag \
+  /lite6_traj_controller/controller_state \
+  /ufactory/joint_states \
+  /gripper/command \
+  /gripper/state \
+  /camera/camera/color/image_raw \
+  /camera/camera/depth/image_rect_raw
+```
+
+### 7.2 Dual Camera Setup
+```bash
+ros2 bag record -o data_bag \
+  /lite6_traj_controller/joint_trajectory \
+  /ufactory/joint_states \
+  /gripper/command \
+  /gripper/state \
+  /camera1/camera1/color/image_raw \
+  /camera1/camera1/depth/image_rect_raw \
+  /camera2/camera2/color/image_raw \
+  /camera2/camera2/depth/image_rect_raw
+```
+
+### 7.3 Compressed Recording (Recommended)
+```bash
+ros2 bag record -o data_bag \
+  --compression-mode file --compression-format zstd \
+  /lite6_traj_controller/controller_state \
+  /ufactory/joint_states \
+  /gripper/command \
+  /gripper/state \
+  /camera1/camera1/color/image_raw \
+  /camera1/camera1/depth/image_rect_raw
+```
