@@ -64,6 +64,8 @@ private:
     std::string ee_frame_name_;
 
     std::string planning_frame_;
+
+    bool inference_mode_;  // When true, disables joystick processing for policy inference
 };
 }
 

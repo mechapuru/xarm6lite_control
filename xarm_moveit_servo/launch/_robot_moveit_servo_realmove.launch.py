@@ -68,6 +68,7 @@ def launch_setup(context, *args, **kwargs):
     joystick_type = LaunchConfiguration('joystick_type', default=1)
     gripper_port = LaunchConfiguration('gripper_port', default='/dev/ttyUSB0')
     gripper_baudrate = LaunchConfiguration('gripper_baudrate', default=57600)
+    inference_mode = LaunchConfiguration('inference_mode', default=False)
     ros_namespace = LaunchConfiguration('ros_namespace', default='').perform(context)
 
     moveit_config_package_name = 'xarm_moveit_config'
@@ -243,6 +244,7 @@ def launch_setup(context, *args, **kwargs):
                         'joystick_type': joystick_type,
                         'gripper_port': gripper_port,
                         'gripper_baudrate': gripper_baudrate,
+                        'inference_mode': inference_mode,
                     },
                 ],
                 # extra_arguments=[{'use_intra_process_comms': True}],

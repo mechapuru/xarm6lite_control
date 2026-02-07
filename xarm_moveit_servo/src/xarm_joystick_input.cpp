@@ -106,6 +106,10 @@ JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions& options)
     _declare_or_get_param<std::string>(gripper_port, "gripper_port", "/dev/ttyUSB0");
     _declare_or_get_param<int>(gripper_baudrate, "gripper_baudrate", 1000000);
     
+    // Inference mode: when true, disables joystick input processing
+    // Gripper is still controllable via /gripper/command topic
+    _declare_or_get_param<bool>(inference_mode_, "inference_mode", false);
+    
     // Initialize Gripper Controller
     gripper_controller_ = std::make_unique<GripperController>(gripper_port, gripper_baudrate);
 
@@ -270,6 +274,12 @@ bool JoyToServoPub::_convert_spacemouse_wireless_joy_to_cmd(const std::vector<fl
 
 void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
 {
+    // In inference mode, skip all joystick processing.
+    // Gripper is controlled via /gripper/command subscriber callback.
+    if (inference_mode_) {
+        return;
+    }
+
     // std::string axes_str = "[ ";
     // for (int i = 0; i < msg->axes.size(); i++) { 
     //     axes_str += std::to_string(msg->axes[i]); 
@@ -350,13 +360,13 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
         //     twist_msg->twist.angular.x, twist_msg->twist.angular.y, twist_msg->twist.angular.z);
         twist_msg->header.frame_id = planning_frame_;
         twist_msg->header.stamp = this->now();
-        // twist_pub_->publish(std::move(twist_msg)); Temporarily disabled
+        twist_pub_->publish(std::move(twist_msg));
     }
     else {
         // publish the JointJog
         joint_msg->header.stamp = this->now();
         joint_msg->header.frame_id = "joint";
-        // joint_pub_->publish(std::move(joint_msg)); Temporarily disabled
+        joint_pub_->publish(std::move(joint_msg));
     }
 }
 
