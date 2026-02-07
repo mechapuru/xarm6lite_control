@@ -9,6 +9,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <cmath>
 
 namespace xarm_moveit_servo
 {
@@ -69,12 +70,33 @@ bool GripperController::moveWithVelocity(int velocity_raw, int32_t& current_posi
     }
 
     // Add a delay to allow the half-duplex serial line to stabilize
-    std::this_thread::sleep_for(std::chrono::milliseconds(20));
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
 
-    // Safety check
+    // Read present load for grip detection
+    int16_t present_load = 0;
+    dxl_comm_result = packetHandler_->read2ByteTxRx(portHandler_, dxl_id_, ADDR_PRESENT_LOAD, (uint16_t*)&present_load, &dxl_error);
+    if (dxl_comm_result != COMM_SUCCESS || dxl_error != 0) {
+        log("Read Load", dxl_comm_result, dxl_error);
+        // Continue anyway, just won't have load protection
+    }
+
+    // Add a delay to allow the half-duplex serial line to stabilize
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+
+    // Determine velocity to set
     int32_t velocity_to_set = velocity_raw;
+
+    // Safety check 1: Position limits
     if ((current_position <= POS_MIN && velocity_raw < 0) || (current_position >= POS_MAX && velocity_raw > 0)) {
         velocity_to_set = 0;
+    }
+
+    // Safety check 2: Load-based grip detection
+    // If closing (velocity < 0) and load exceeds threshold, object is gripped - stop
+    // If opening (velocity > 0) and load exceeds threshold, something is blocking - stop
+    if (velocity_raw != 0 && std::abs(present_load) > GRIP_LOAD_THRESHOLD) {
+        velocity_to_set = 0;
+        // std::cout << "Grip detected! Load: " << present_load << " (threshold: " << GRIP_LOAD_THRESHOLD << ")" << std::endl;
     }
 
     // Write goal velocity

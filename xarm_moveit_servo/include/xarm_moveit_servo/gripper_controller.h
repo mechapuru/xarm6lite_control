@@ -25,6 +25,9 @@ public:
     // Position Limits
     static const int32_t POS_MIN = 1250;
     static const int32_t POS_MAX = 1600;
+    
+    // Load threshold for grip detection (0.1% units, 300 = 30% load)
+    static const int16_t GRIP_LOAD_THRESHOLD = 300;
 
 private:
     // Dynamixel SDK handlers
@@ -41,6 +44,7 @@ private:
     const uint16_t ADDR_OPERATING_MODE = 11;
     const uint16_t ADDR_GOAL_VELOCITY = 104;
     const uint16_t ADDR_PRESENT_POSITION = 132;
+    const uint16_t ADDR_PRESENT_LOAD = 126;  // -1000 to 1000, 0.1% units
 
     // Thread safety
     std::mutex mutex_;
