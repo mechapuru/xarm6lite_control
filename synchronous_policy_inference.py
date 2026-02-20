@@ -69,7 +69,7 @@ class SynchronousPolicyInferenceNode(Node):
         self.declare_parameter('joint_state_topic', '/ufactory/joint_states')
         self.joint_state_topic = self.get_parameter('joint_state_topic').value
 
-        self.declare_parameter('action_execution_horizon', 13)
+        self.declare_parameter('action_execution_horizon', 5)
         self.action_execution_horizon = self.get_parameter('action_execution_horizon').value
         
         self.bridge = CvBridge()
@@ -101,7 +101,7 @@ class SynchronousPolicyInferenceNode(Node):
         self.ts = message_filters.ApproximateTimeSynchronizer(
             [rgb_sub, depth_sub, joint_sub], 
             queue_size=10, 
-            slop=0.5
+            slop=0.1
         )
         self.ts.registerCallback(self.synchronized_callback)
         
@@ -256,10 +256,13 @@ class SynchronousPolicyInferenceNode(Node):
                 pred_gripper_val = action_delta[6]
                 cmd_msg = Int32()
                 cmd_msg.data = 0
-                if pred_gripper_val > 0.6:
-                    cmd_msg.data = 30 # Open velocity
-                elif pred_gripper_val < -0.6:
-                    cmd_msg.data = -30 # Close velocity
+
+                print("the predicted gripper values are",pred_gripper_val)
+
+                if pred_gripper_val > 0.1:
+                    cmd_msg.data = 30 # Close velocity
+                elif pred_gripper_val < -0.1:
+                    cmd_msg.data = -30 # Open velocity
                 else:
                     cmd_msg.data = 0
                 self.gripper_command_pub.publish(cmd_msg)
@@ -296,7 +299,7 @@ class SynchronousPolicyInferenceNode(Node):
 
             # Wait for the action to complete (blocking with timeout)
             start_time = time.time()
-            timeout = 0.5  # Timeout in seconds
+            timeout = 3  # Timeout in seconds
             
             while rclpy.ok():
                 # Check for timeout
