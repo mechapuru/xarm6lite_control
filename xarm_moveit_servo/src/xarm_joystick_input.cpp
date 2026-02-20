@@ -99,6 +99,7 @@ JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions& options)
     _declare_or_get_param<std::string>(robot_link_command_frame_, "moveit_servo.robot_link_command_frame", robot_link_command_frame_);
     _declare_or_get_param<std::string>(ee_frame_name_, "moveit_servo.ee_frame_name", ee_frame_name_);
     _declare_or_get_param<std::string>(planning_frame_, "moveit_servo.planning_frame", planning_frame_);
+    _declare_or_get_param<bool>(inference_mode_, "inference_mode", false);
 
     // Gripper parameters
     std::string gripper_port;
@@ -128,6 +129,7 @@ JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions& options)
     joint_pub_ = this->create_publisher<control_msgs::msg::JointJog>(joint_command_in_topic_, ros_queue_size_);
     // collision_pub_ = this->create_publisher<moveit_msgs::msg::PlanningScene>("/planning_scene", 10);
 
+    // Create a service client to start the ServoServer
     // Create a service client to start the ServoServer
     servo_start_client_ = this->create_client<std_srvs::srv::Trigger>("/servo_server/start_servo");
     servo_start_client_->wait_for_service(std::chrono::seconds(1));
@@ -285,28 +287,36 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     auto gripper_cmd_msg = std::make_unique<std_msgs::msg::Int32>();
     auto gripper_state_msg = std::make_unique<std_msgs::msg::Float64>();
 
-    if (joystick_type_ == JOYSTICK_XBOX360_WIRED || joystick_type_ == JOYSTICK_XBOX360_WIRELESS)
-    {
-        if (msg->buttons[XBOX360_BTN_A]) {
-            gripper_cmd_velocity = GRIPPER_OPEN_VELOCITY;
-        } else if (msg->buttons[XBOX360_BTN_B]) {
-            gripper_cmd_velocity = GRIPPER_CLOSE_VELOCITY;
+    if (!inference_mode_) {
+        if (joystick_type_ == JOYSTICK_XBOX360_WIRED || joystick_type_ == JOYSTICK_XBOX360_WIRELESS)
+        {
+            if (msg->buttons[XBOX360_BTN_A]) {
+                gripper_cmd_velocity = GRIPPER_OPEN_VELOCITY;
+            } else if (msg->buttons[XBOX360_BTN_B]) {
+                gripper_cmd_velocity = GRIPPER_CLOSE_VELOCITY;
+            }
         }
+        
+        // Send command and get state
+        gripper_controller_->moveWithVelocity(gripper_cmd_velocity, gripper_current_pos);
+    } else {
+        // In inference mode: Just read the position without overriding velocity
+        gripper_controller_->getPosition(gripper_current_pos);
     }
-    
-    // Send command and get state
-    gripper_controller_->moveWithVelocity(gripper_cmd_velocity, gripper_current_pos);
 
     // Normalize the raw position
     double normalized_pos = (double)(gripper_current_pos - GripperController::POS_MIN) / (double)(GripperController::POS_MAX - GripperController::POS_MIN);
     // Clamp the value between 0.0 and 1.0 to be safe
     normalized_pos = std::max(0.0, std::min(1.0, normalized_pos));
 
-    // Publish both command and state
-    gripper_cmd_msg->data = gripper_cmd_velocity;
+    // Publish state (ONLY state, don't publish command if in inference mode)
     gripper_state_msg->data = normalized_pos;
-    gripper_command_pub_->publish(std::move(gripper_cmd_msg));
     gripper_state_pub_->publish(std::move(gripper_state_msg));
+
+    if (!inference_mode_) {
+        gripper_cmd_msg->data = gripper_cmd_velocity;
+        gripper_command_pub_->publish(std::move(gripper_cmd_msg));
+    }
 
 
     // Create the messages we might publish for the arm
@@ -342,7 +352,7 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
         default:
             return;
     }
-    if (pub_twist) {
+    if (pub_twist && !inference_mode_) {
         // publish the TwistStamped
         _filter_twist_msg(twist_msg, 0.2);
         // RCLCPP_INFO(this->get_logger(), "linear=[%f, %f, %f], angular=[%f, %f, %f]", 
@@ -350,13 +360,13 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
         //     twist_msg->twist.angular.x, twist_msg->twist.angular.y, twist_msg->twist.angular.z);
         twist_msg->header.frame_id = planning_frame_;
         twist_msg->header.stamp = this->now();
-        // twist_pub_->publish(std::move(twist_msg)); Temporarily disabled
+        twist_pub_->publish(std::move(twist_msg)); // Restored
     }
-    else {
+    else if (!pub_twist && !inference_mode_) {
         // publish the JointJog
         joint_msg->header.stamp = this->now();
         joint_msg->header.frame_id = "joint";
-        // joint_pub_->publish(std::move(joint_msg)); Temporarily disabled
+        joint_pub_->publish(std::move(joint_msg)); // Restored
     }
 }
 

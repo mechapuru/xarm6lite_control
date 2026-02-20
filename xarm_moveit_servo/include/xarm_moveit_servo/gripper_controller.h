@@ -21,6 +21,7 @@ public:
     GripperController(const std::string& port_name, uint32_t baud_rate);
     ~GripperController();
     bool moveWithVelocity(int velocity_raw, int32_t& current_position);
+    bool getPosition(int32_t& current_position);
 
     // Position Limits
     static const int32_t POS_MIN = 1250;

@@ -87,6 +87,23 @@ bool GripperController::moveWithVelocity(int velocity_raw, int32_t& current_posi
     return true;
 }
 
+bool GripperController::getPosition(int32_t& current_position)
+{
+    std::lock_guard<std::mutex> lock(mutex_);
+
+    uint8_t dxl_error = 0;
+    int dxl_comm_result = 0;
+
+    // Read present position
+    dxl_comm_result = packetHandler_->read4ByteTxRx(portHandler_, dxl_id_, ADDR_PRESENT_POSITION, (uint32_t*)&current_position, &dxl_error);
+    if (dxl_comm_result != COMM_SUCCESS || dxl_error != 0) {
+        log("Read Position (getPosition)", dxl_comm_result, dxl_error);
+        return false;
+    }
+
+    return true;
+}
+
 void GripperController::log(const char* msg, int result, int error)
 {
     if (result != COMM_SUCCESS) {

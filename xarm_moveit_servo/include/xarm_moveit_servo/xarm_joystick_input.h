@@ -51,6 +51,8 @@ private:
 
     std::unique_ptr<GripperController> gripper_controller_;
 
+    bool inference_mode_ = false;
+
     int dof_;
     int ros_queue_size_;
     int joystick_type_;

@@ -27,6 +27,7 @@ def generate_launch_description():
     default_gripper_baud = LaunchConfiguration('default_gripper_baud', default=2000000)
     gripper_port = LaunchConfiguration('gripper_port', default='/dev/ttyUSB0')
     gripper_baudrate = LaunchConfiguration('gripper_baudrate', default=57600)
+    inference_mode = LaunchConfiguration('inference_mode', default=False)
 
     # robot moveit servo launch
     # xarm_moveit_servo/launch/_robot_moveit_servo.launch.py
@@ -49,6 +50,7 @@ def generate_launch_description():
             'ros2_control_plugin': 'uf_robot_hardware/UFRobotSystemHardware',
             'gripper_port': gripper_port,
             'gripper_baudrate': gripper_baudrate,
+            'inference_mode': inference_mode,
         }.items(),
     )
 
