@@ -1,4 +1,36 @@
 #!/usr/bin/env python3
+"""
+Synchronous Policy Inference Node
+
+REQUIRED SETUP BEFORE RUNNING:
+==============================
+
+Terminal 1 - Robot + Gripper (inference mode):
+    cd ~/rrc/xarm_ws
+    source install/setup.bash
+    ros2 launch xarm_moveit_servo lite6_moveit_servo_realmove.launch.py \
+        robot_ip:=192.168.1.175 \
+        gripper_port:=/dev/ttyUSB0 \
+        inference_mode:=true
+
+Terminal 2 - Camera:
+    source install/setup.bash
+    ros2 launch realsense2_camera rs_launch.py \
+        camera_name:=camera \
+        camera_namespace:=camera \
+        rgb_camera.color_profile:="640,360,30" \
+        depth_module.depth_profile:="640,360,30"
+
+Terminal 3 - Run this script:
+    source install/setup.bash
+    python3 src/xarm_ros2/synchronous_policy_inference.py
+"""
+
+'''
+Parameters to Experiment With:
+    1. action_execution_horizon
+    2. slop in message_filter
+'''
 
 import rclpy
 from rclpy.node import Node
@@ -113,8 +145,8 @@ class SynchronousPolicyInferenceNode(Node):
                 depth_img = self.bridge.imgmsg_to_cv2(depth_msg, "passthrough")
             
             # Resize images to expected input size
-            rgb_resized = cv2.resize(rgb_img, (640, 480), interpolation=cv2.INTER_AREA)
-            depth_resized = cv2.resize(depth_img, (640, 480), interpolation=cv2.INTER_NEAREST)
+            rgb_resized = cv2.resize(rgb_img, (640, 360), interpolation=cv2.INTER_AREA)
+            depth_resized = cv2.resize(depth_img, (640, 360), interpolation=cv2.INTER_NEAREST)
              
             joints = list(joint_msg.position[:6])
             
