@@ -101,7 +101,7 @@ class SynchronousPolicyInferenceNode(Node):
         self.ts = message_filters.ApproximateTimeSynchronizer(
             [rgb_sub, depth_sub, joint_sub], 
             queue_size=10, 
-            slop=0.1
+            slop=0.01
         )
         self.ts.registerCallback(self.synchronized_callback)
         
@@ -258,16 +258,24 @@ class SynchronousPolicyInferenceNode(Node):
                 cmd_msg.data = 0
 
                 print("the predicted gripper values are",pred_gripper_val)
-
-                if pred_gripper_val > 0.1:
+                
+                
+                if pred_gripper_val >= 0.1 and self.current_gripper_state < 3970:
                     cmd_msg.data = 30 # Close velocity
-                elif pred_gripper_val < -0.1:
+                elif pred_gripper_val <= -0.1 and self.current_gripper_state > 3770:
                     cmd_msg.data = -30 # Open velocity
                 else:
                     cmd_msg.data = 0
+                
                 self.gripper_command_pub.publish(cmd_msg)
+                
+                #Publishing The values we are getting
+                
+
+                
                 print("got gripper message", cmd_msg.data)
-                 # Default stop
+                
+                # Default stop
                 # self.gripper_action_history.append(pred_gripper_val)
 
                 # c
@@ -292,7 +300,7 @@ class SynchronousPolicyInferenceNode(Node):
             
             point = JointTrajectoryPoint()
             point.positions = target_positions
-            point.time_from_start = rclpy.duration.Duration(seconds=0.2).to_msg() # Duration for this step
+            point.time_from_start = rclpy.duration.Duration(seconds=0.1).to_msg() # Duration for this step
             
             traj_msg.points.append(point)
             self.arm_action_pub.publish(traj_msg)

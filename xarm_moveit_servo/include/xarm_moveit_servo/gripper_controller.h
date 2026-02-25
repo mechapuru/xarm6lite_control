@@ -24,8 +24,8 @@ public:
     bool getPosition(int32_t& current_position);
 
     // Position Limits
-    static const int32_t POS_MIN = 800;
-    static const int32_t POS_MAX = 1000;
+    static const int32_t POS_MIN = 3750;
+    static const int32_t POS_MAX = 4000;
 
 private:
     // Dynamixel SDK handlers
