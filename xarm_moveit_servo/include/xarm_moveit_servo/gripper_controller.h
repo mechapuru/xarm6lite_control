@@ -23,8 +23,8 @@ public:
     bool moveWithVelocity(int velocity_raw, int32_t& current_position);
 
     // Position Limits
-    static const int32_t POS_MIN = 1250;
-    static const int32_t POS_MAX = 1600;
+    static const int32_t POS_MIN = 3750;
+    static const int32_t POS_MAX = 4000;
 
 private:
     // Dynamixel SDK handlers

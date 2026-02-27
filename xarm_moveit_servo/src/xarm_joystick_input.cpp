@@ -350,13 +350,13 @@ void JoyToServoPub::_joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
         //     twist_msg->twist.angular.x, twist_msg->twist.angular.y, twist_msg->twist.angular.z);
         twist_msg->header.frame_id = planning_frame_;
         twist_msg->header.stamp = this->now();
-        // twist_pub_->publish(std::move(twist_msg)); Temporarily disabled
+        twist_pub_->publish(std::move(twist_msg));
     }
     else {
         // publish the JointJog
         joint_msg->header.stamp = this->now();
         joint_msg->header.frame_id = "joint";
-        // joint_pub_->publish(std::move(joint_msg)); Temporarily disabled
+        joint_pub_->publish(std::move(joint_msg));
     }
 }
 
